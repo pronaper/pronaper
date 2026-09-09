@@ -45,7 +45,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 16px 5%;
+      padding: 10px 5%;
       border-bottom: 1px solid #e0e0e0;
       position: sticky;
       top: 0;
@@ -53,11 +53,10 @@
       z-index: 100;
     }
 
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      letter-spacing: 2px;
-      color: var(--primary-color);
+    .logo-img {
+      height: 45px;
+      display: block;
+      object-fit: contain;
     }
 
     .nav-links {
@@ -237,7 +236,9 @@
 
   <!-- NAVEGACIÓN -->
   <nav class="navbar">
-    <div class="logo">PRONAPER</div>
+    <a href="#">
+      <img src="pronaper logo.png" alt="Pronaper Logo" class="logo-img">
+    </a>
     <ul class="nav-links">
       <li><a href="#productos">Catálogo</a></li>
       <li><a href="#nosotros">Nosotros</a></li>
@@ -326,6 +327,41 @@
     <div class="product-card">
       <img src="Aceite de Linaza extra virgen.png" alt="Aceite de Linaza Extra Virgen" class="product-image">
       <div class="product-title">Aceite de Linaza Extra Virgen</div>
+      <div class="product-price">Consultar</div>
+      <a href="#" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
+    </div>
+
+    <div class="product-card">
+      <img src="Aceite de aloe vera estabilizado.png" alt="Aceite de Aloe Vera Estabilizado" class="product-image">
+      <div class="product-title">Aceite de Aloe Vera Estabilizado</div>
+      <div class="product-price">Consultar</div>
+      <a href="#" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
+    </div>
+
+    <div class="product-card">
+      <img src="clavo de olor.png" alt="Extracto de Clavo de Olor" class="product-image">
+      <div class="product-title">Extracto de Clavo de Olor</div>
+      <div class="product-price">Consultar</div>
+      <a href="#" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
+    </div>
+
+    <div class="product-card">
+      <img src="menta.png" alt="Extracto de Menta" class="product-image">
+      <div class="product-title">Extracto de Menta</div>
+      <div class="product-price">Consultar</div>
+      <a href="#" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
+    </div>
+
+    <div class="product-card">
+      <img src="neem.png" alt="Extracto de Neem" class="product-image">
+      <div class="product-title">Extracto de Neem</div>
+      <div class="product-price">Consultar</div>
+      <a href="#" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
+    </div>
+
+    <div class="product-card">
+      <img src="oregano.png" alt="Extracto de Orégano" class="product-image">
+      <div class="product-title">Extracto de Orégano</div>
       <div class="product-price">Consultar</div>
       <a href="#" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
     </div>
