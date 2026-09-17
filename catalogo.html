@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo | Pronaper</title>
+  <style>
+    :root {
+      --primary-color: #0b3c3d;
+      --secondary-color: #f4f6f5;
+      --text-color: #333333;
+      --light-text: #ffffff;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-family); color: var(--text-color); background: #f9f9f9; }
+    a { text-decoration: none; color: inherit; }
+
+    /* NAVEGACIÓN */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 5%;
+      border-bottom: 1px solid #e0e0e0;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo-img { height: 60px; object-fit: contain; }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a { font-weight: 500; font-size: 0.95rem; }
+
+    /* CONTENEDOR DEL CATÁLOGO */
+    .catalog-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .catalog-title {
+      text-align: center;
+      font-size: 2.2rem;
+      color: var(--primary-color);
+      margin-bottom: 30px;
+    }
+
+    /* GALERÍA DE IMÁGENES DEL CATÁLOGO */
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .catalog-item {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .catalog-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #1a1a1a;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="navbar">
+    <a href="index.html">
+      <img src="pronaper logo.png" alt="Pronaper Logo" class="logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="catalogo.html" style="color: var(--primary-color); font-weight: bold;">Catálogo</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- SECCIÓN CATÁLOGO -->
+  <main class="catalog-container">
+    <h1 class="catalog-title">Catálogo de Productos</h1>
+
+    <div class="catalog-grid">
+      <div class="catalog-item"><img src="catalogo 1.jpg" alt="Catálogo 1"></div>
+      <div class="catalog-item"><img src="catalogo 2.jpg" alt="Catálogo 2"></div>
+      <div class="catalog-item"><img src="catalogo 3.jpg" alt="Catálogo 3"></div>
+      <div class="catalog-item"><img src="catalogo 4.jpg" alt="Catálogo 4"></div>
+      <div class="catalog-item"><img src="catalogo 5.jpg" alt="Catálogo 5"></div>
+      <div class="catalog-item"><img src="catalogo 6.jpg" alt="Catálogo 6"></div>
+      <div class="catalog-item"><img src="catalogo 7.jpg" alt="Catálogo 7"></div>
+      <div class="catalog-item"><img src="catalogo 8.jpg" alt="Catálogo 8"></div>
+      <div class="catalog-item"><img src="catalogo 9.jpg" alt="Catálogo 9"></div>
+      <div class="catalog-item"><img src="catalogo 10.jpg" alt="Catálogo 10"></div>
+      <div class="catalog-item"><img src="catalogo 11.jpg" alt="Catálogo 11"></div>
+      <div class="catalog-item"><img src="catalogo 12.jpg" alt="Catálogo 12"></div>
+      <div class="catalog-item"><img src="catalogo 13.jpg" alt="Catálogo 13"></div>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 Pronaper. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
