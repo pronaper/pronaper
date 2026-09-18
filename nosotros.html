@@ -24,6 +24,9 @@
       color: var(--text-color);
       background-color: #ffffff;
       line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     a {
@@ -73,14 +76,16 @@
     /* CONTENIDO SOBRE NOSOTROS */
     .about-container {
       max-width: 800px;
-      margin: 50px auto;
-      padding: 0 20px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex: 1;
     }
 
     .about-container h1 {
       color: var(--primary-color);
       font-size: 2.2rem;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       text-align: center;
     }
 
@@ -94,15 +99,13 @@
     footer {
       background-color: #1a1a1a;
       color: #aaa;
-      padding: 40px 5% 20px;
+      padding: 30px 5%;
       font-size: 0.9rem;
-      margin-top: 60px;
+      margin-top: auto;
     }
 
     .copyright {
       text-align: center;
-      padding-top: 20px;
-      border-top: 1px solid #333;
     }
   </style>
 </head>
@@ -127,11 +130,11 @@
   </nav>
 
   <!-- CONTENIDO -->
-  <section class="about-container">
+  <main class="about-container">
     <h1>Sobre Pronaper</h1>
     <p>En Pronaper nos dedicamos a la formulación y elaboración de productos y extractos 100% naturales, elaborados con altos estándares de pureza y calidad para favorecer el bienestar y la salud de nuestros clientes.</p>
     <p>Nuestra misión es acercar los beneficios de la medicina botánica y concentrados naturales a cada hogar, garantizando procesos respetuosos con la materia prima y enfocados en brindar resultados efectivos.</p>
-  </section>
+  </main>
 
   <!-- FOOTER -->
   <footer>
