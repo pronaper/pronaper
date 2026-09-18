@@ -5,13 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pronaper | Productos Naturales para la Salud</title>
   
-  <!-- Tipografía Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* RESET Y BASES */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -21,21 +19,14 @@
       font-family: 'Plus Jakarta Sans', sans-serif;
       background-color: #f8fafc;
       color: #1e293b;
-      line-height: 1.6;
-    }
-
-    /* CONTROL DE IMÁGENES (Evita que se agiganten) */
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
+      line-height: 1.5;
     }
 
     /* ENCABEZADO Y NAVEGACIÓN */
     .navbar {
       background-color: #ffffff;
       border-bottom: 1px solid #e2e8f0;
-      padding: 1rem 2rem;
+      padding: 1.25rem 2rem;
       position: sticky;
       top: 0;
       z-index: 100;
@@ -49,10 +40,11 @@
     }
     .logo {
       text-decoration: none;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
+      letter-spacing: -0.5px;
     }
     .logo-bold {
-      font-weight: 700;
+      font-weight: 800;
       color: #166534;
     }
     .logo-light {
@@ -61,13 +53,14 @@
     }
     .nav-links {
       display: flex;
-      gap: 1.5rem;
+      gap: 1.75rem;
       align-items: center;
     }
     .nav-links a {
       text-decoration: none;
       color: #475569;
-      font-weight: 500;
+      font-weight: 600;
+      font-size: 0.95rem;
       transition: color 0.2s;
     }
     .nav-links a:hover, .nav-links a.active {
@@ -76,8 +69,9 @@
     .btn-primary {
       background-color: #166534;
       color: #ffffff !important;
-      padding: 0.5rem 1.25rem;
-      border-radius: 6px;
+      padding: 0.6rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 600;
       transition: background-color 0.2s;
     }
     .btn-primary:hover {
@@ -97,34 +91,26 @@
     .badge {
       background-color: #dcfce7;
       color: #15803d;
-      padding: 0.25rem 0.75rem;
+      padding: 0.35rem 0.85rem;
       border-radius: 9999px;
-      font-size: 0.875rem;
-      font-weight: 600;
+      font-size: 0.85rem;
+      font-weight: 700;
       display: inline-block;
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
     .hero h1 {
       font-size: 2.5rem;
       color: #0f172a;
       margin-bottom: 1rem;
+      font-weight: 800;
+      line-height: 1.2;
     }
     .hero p {
-      font-size: 1.125rem;
+      font-size: 1.15rem;
       color: #475569;
       margin-bottom: 2rem;
-    }
-    .hero-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-    }
-    .btn-secondary {
-      background-color: #ffffff;
-      color: #334155 !important;
-      border: 1px solid #cbd5e1;
-      padding: 0.5rem 1.25rem;
-      border-radius: 6px;
     }
 
     /* CATÁLOGO DE PRODUCTOS */
@@ -135,31 +121,33 @@
     }
     .section-title {
       text-align: center;
-      font-size: 2rem;
+      font-size: 2.25rem;
       color: #0f172a;
-      margin-bottom: 2.5rem;
+      margin-bottom: 3rem;
+      font-weight: 800;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
     }
     .card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
-      border-radius: 12px;
+      border-radius: 16px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
       transition: transform 0.2s, box-shadow 0.2s;
     }
     .card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1);
     }
     .card-img-wrapper {
       width: 100%;
-      height: 240px;
+      height: 260px;
       background-color: #f1f5f9;
       overflow: hidden;
     }
@@ -169,15 +157,16 @@
       object-fit: cover;
     }
     .card-content {
-      padding: 1.5rem;
+      padding: 1.75rem;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
     }
     .card-content h3 {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       color: #0f172a;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
     }
     .card-content p {
       color: #64748b;
@@ -188,15 +177,16 @@
     .btn-card {
       text-align: center;
       background-color: #f1f5f9;
-      color: #1e293b;
+      color: #0f172a;
       text-decoration: none;
-      padding: 0.6rem 1rem;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: background-color 0.2s;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: background-color 0.2s, color 0.2s;
     }
     .btn-card:hover {
-      background-color: #e2e8f0;
+      background-color: #166534;
+      color: #ffffff;
     }
   </style>
 </head>
