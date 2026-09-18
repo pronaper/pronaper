@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extracto de Ricino | Pronaper</title>
+  <style>
+    :root { --primary-color: #0b3c3d; --secondary-color: #f4f6f5; --text-color: #333333; --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font-family); color: var(--text-color); background-color: #ffffff; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    .navbar { display: flex; justify-content: space-between; align-items: center; padding: 10px 5%; border-bottom: 1px solid #e0e0e0; background: #fff; position: sticky; top: 0; z-index: 100; }
+    .logo-img { height: 60px; object-fit: contain; }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { font-weight: 500; font-size: 0.95rem; }
+    .product-detail-container { max-width: 1100px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; align-items: start; }
+    .product-image-box { background: #fafafa; border: 1px solid #eee; border-radius: 8px; padding: 24px; text-align: center; position: sticky; top: 90px; }
+    .product-image-box img { max-width: 100%; height: auto; border-radius: 6px; }
+    .product-info h1 { font-size: 2.2rem; color: var(--primary-color); margin-bottom: 10px; }
+    .subtitle { font-size: 1.2rem; font-weight: 600; color: #666; margin-bottom: 24px; border-bottom: 2px solid var(--secondary-color); padding-bottom: 8px; }
+    .section-block { margin-bottom: 24px; }
+    .section-block h3 { color: var(--primary-color); font-size: 1.15rem; margin-bottom: 8px; }
+    .section-block p { color: #444; text-align: justify; }
+    .feature-group { margin-bottom: 12px; }
+    .feature-title { font-weight: 600; color: #222; margin-bottom: 4px; }
+    .feature-list { list-style-type: disc; padding-left: 20px; color: #555; }
+    .feature-list li { margin-bottom: 6px; }
+    .btn-back { display: inline-block; background-color: var(--primary-color); color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 600; margin-top: 15px; transition: background 0.3s; }
+    .btn-back:hover { background-color: #145556; }
+    footer { background-color: #1a1a1a; color: #aaa; text-align: center; padding: 20px; margin-top: 60px; font-size: 0.9rem; }
+    @media (max-width: 768px) { .product-detail-container { grid-template-columns: 1fr; } .product-image-box { position: static; } }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html"><img src="pronaper logo.png" alt="Pronaper Logo" class="logo-img"></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+    </ul>
+  </nav>
+
+  <main class="product-detail-container">
+    <div class="product-image-box">
+      <img src="ricino.png" alt="Extracto de Ricino">
+      <a href="index.html" class="btn-back">← Volver al inicio</a>
+    </div>
+
+    <div class="product-info">
+      <h1>💧 Extracto de Ricino (Aceite Extra Virgen)</h1>
+      <div class="subtitle">Ficha Técnica y Detalles de Salud</div>
+
+      <div class="section-block">
+        <h3>1. Descripción y Principios Activos</h3>
+        <p>Aceite extraído por prensado en frío de las semillas de <em>Ricinus communis</em>. Su perfil lipídico está dominado hasta en un 90% por el Ácido Ricinoleico (ácido graso monoinsaturado hidroxilado), acompañado de Ácido Oleico, Ácido Linoleico y Vitamina E (Alfa-tocoferol).</p>
+      </div>
+
+      <div class="section-block">
+        <h3>2. Propiedades Fisiológicas y Mecanismos de Acción</h3>
+        <div class="feature-group">
+          <div class="feature-title">Estimulación Folicular y Dermocosmética:</div>
+          <ul class="feature-list">
+            <li><strong>Nutrición Folículo-Pilosa:</strong> El ácido ricinoleico penetra en la dermis capilar estimulando la microcirculación local alrededor del folículo piloso, favoreciendo el aporte de nutrientes para el crecimiento de cabello, cejas y pestañas.</li>
+            <li><strong>Acción Antimicrobiana Local:</strong> Inhibe la proliferación micótica y bacteriana en el cuero cabelludo y el borde palpebral, reduciendo la pérdida folicular por inflamación o caspa.</li>
+          </ul>
+        </div>
+
+        <div class="feature-group">
+          <div class="feature-title">Efecto Laxante Terapéutico (Uso Interno):</div>
+          <ul class="feature-list">
+            <li>Tras ser hidrolizado por la lipasa pancreática en el intestino delgado, el ácido ricinoleico estimula los receptores EP3 y EP4 de prostanoides en el músculo liso intestinal, promoviendo el peristaltismo para la evacuación suave.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>© 2026 Pronaper. Todos los derechos reservados.</footer>
+</body>
+</html>
