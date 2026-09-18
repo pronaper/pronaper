@@ -1,325 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pronaper | Productos Naturales para la Salud</title>
-    
-    <style>
-        :root {
-            --primary-color: #0b3c3d;
-            --secondary-color: #f4f6f5;
-            --text-color: #333333;
-            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: var(--font-family);
-            color: var(--text-color);
-            background-color: #ffffff;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 5%;
-            border-bottom: 1px solid #e0e0e0;
-            background: #fff;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .logo-img {
-            height: 60px;
-            object-fit: contain;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 24px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
-
-        .hero {
-            background-color: var(--secondary-color);
-            padding: 60px 5%;
-            text-align: center;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .hero h1 {
-            font-size: 2.2rem;
-            color: var(--primary-color);
-            margin-bottom: 12px;
-        }
-
-        .hero p {
-            font-size: 1.05rem;
-            color: #555;
-            max-width: 650px;
-            margin: 0 auto;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 24px;
-        }
-
-        .card {
-            background: #ffffff;
-            border: 1px solid #e5e5e5;
-            border-radius: 8px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.06);
-        }
-
-        .card-img {
-            width: 100%;
-            height: auto;
-            border-radius: 6px;
-            object-fit: contain;
-            background: #fafafa;
-        }
-
-        .card-title {
-            font-size: 1.1rem;
-            color: var(--primary-color);
-            margin: 16px 0 8px 0;
-            font-weight: 600;
-        }
-
-        .card-description {
-            font-size: 0.88rem;
-            color: #666;
-            margin-bottom: 20px;
-            line-height: 1.4;
-        }
-
-        .card-actions {
-            display: flex;
-            gap: 10px;
-            margin-top: auto;
-        }
-
-        .btn-primary {
-            flex: 1;
-            background-color: var(--primary-color);
-            color: #ffffff;
-            text-align: center;
-            padding: 10px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            border: none;
-            display: block;
-        }
-
-        footer {
-            background-color: #1a1a1a;
-            color: #aaa;
-            text-align: center;
-            padding: 24px;
-            margin-top: 60px;
-            font-size: 0.85rem;
-        }
-
-        @media (max-width: 768px) {
-            .navbar { flex-direction: column; gap: 15px; }
-            .hero h1 { font-size: 1.8rem; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pronaper | Productos Naturales para la Salud</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav class="navbar">
-        <a href="index.html">
-            <img src="pronaper logo.png" alt="Pronaper Logo" class="logo-img">
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="catalogo.html">Catálogo</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-        </ul>
-    </nav>
+  <!-- ENCABEZADO Y NAVEGACIÓN -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-bold">PRONA</span><span class="logo-light">PER</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Inicio</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto" class="btn-primary">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-    <section class="hero">
-        <h1>Extractos y Productos Naturales para tu Salud</h1>
-        <p>Descubre nuestra línea de extractos de alta pureza diseñados para optimizar tu bienestar general y respuesta inmunológica.</p>
-    </section>
+  <!-- SECCIÓN PRINCIPAL (HERO) -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="badge">100% Natural y Puro</span>
+      <h1>Extractos y Productos Naturales para tu Salud</h1>
+      <p>Descubre nuestra línea de extractos de alta pureza diseñados para optimizar tu bienestar general y respuesta inmunológica.</p>
+      <div class="hero-buttons">
+        <a href="#catalogo" class="btn-primary">Ver Productos</a>
+        <a href="#nosotros" class="btn-secondary">Saber Más</a>
+      </div>
+    </div>
+  </section>
 
-    <main class="container">
-        <div class="grid">
-            
-            <!-- Producto 1 -->
-            <div class="card">
-                <img src="ajo negro.png" alt="Extracto Fluido de Ajo Negro" class="card-img">
-                <h2 class="card-title">Extracto Fluido de Ajo Negro</h2>
-                <p class="card-description">Potente antioxidante natural que apoya el sistema cardiovascular e inmunológico.</p>
-                <div class="card-actions">
-                    <a href="ajo-negro.html" class="btn-primary">Detalles</a>
-                </div>
-            </div>
-
-            <!-- Producto 2 -->
-            <div class="card">
-                <img src="cebolla negra.png" alt="Extracto Fluido de Cebolla Negra" class="card-img">
-                <h2 class="card-title">Extracto Fluido de Cebolla Negra</h2>
-                <p class="card-description">Rico en flavonoides y quercetina. Soporte respiratorio y microcirculatorio.</p>
-                <div class="card-actions">
-                    <a href="cebolla-negra.html" class="btn-primary">Detalles</a>
-                </div>
-            </div>
-
-            <!-- Producto 3 -->
-            <div class="card">
-                <img src="limon negro.png" alt="Extracto de Limón Negro" class="card-img">
-                <h2 class="card-title">Extracto de Limón Negro</h2>
-                <p class="card-description">Alto contenido de Vitamina C concentrada y polifenoles desintoxicantes.</p>
-                <div class="card-actions">
-                    <a href="limon-negro.html" class="btn-primary">Detalles</a>
-                </div>
-            </div>
-
-            <!-- Producto 4 -->
-            <div class="card">
-                <img src="AJO NEGRO 2.png" alt="Ajo Negro con Miel" class="card-img">
-                <h2 class="card-title">Ajo Negro con Miel</h2>
-                <p class="card-description">Fusión sinérgica ideal para reforzar defensas y aportar energía natural diario.</p>
-                <div class="card-actions">
-                    <a href="miel-ajo-negro.html" class="btn-primary">Detalles</a>
-                </div>
-            </div>
-
-            <!-- Producto 5 -->
-            <div class="card">
-                <img src="mucuna.png" alt="Extracto de Mucuna Pruriens" class="card-img">
-                <h2 class="card-title">Extracto de Mucuna (Mucuna Pruriens)</h2>
-                <p class="card-description">Fuente natural de L-DOPA. Apoya la función nerviosa, estado de ánimo y vitalidad.</p>
-                <div class="card-actions">
-                    <a href="mucuna.html" class="btn-primary">Detalles</a>
-                </div>
-            </div>
-
-            <!-- Producto 6 -->
-            <div class="card">
-                <img src="ricino.png" alt="Extracto de Ricino" class="card-img">
-                <h2 class="card-title">Extracto de Ricino (Aceite Extra Virgen)</h2>
-                <p class="card-description">Prensado en frío. Excelente para nutrición capilar, folicular y limpieza intestinal.</p>
-                <div class="card-actions">
-                    <a href="ricino.html" class="btn-primary">Detalles</a>
-                </div>
-            </div>
-
-            <!-- Producto 7 -->
-            <div class="card">
-                <img src="Aceite medicinal de coco extra virgen.png" alt="Aceite Medicinal de Coco Extra Virgen" class="card-img">
-                <h2 class="card-title">Aceite Medicinal de Coco Extra Virgen</h2>
-                <p class="card-description">Rico en Ácido Láurico y TCM para soporte metabólico e intestinal.</p>
-                <div class="card-actions">
-                    <a href="aceite-coco.html" class="btn-primary">Detalles</a>
-                </div>
-            </div>
-
-            <!-- Producto 8 -->
-            <div class="card">
-                <img src="Aceite de Linaza extra virgen.png" alt="Aceite de Linaza Extra Virgen" class="card-img">
-                <h2 class="card-title">Aceite de Linaza Extra Virgen</h2>
-                <p class="card-description">Fuente vegetal concentrada de Omega 3 (ALA) para el cuidado cardiovascular.</p>
-                <div class="card-actions">
-                    <a href="aceite-linaza.html" class="btn-primary">Detalles</a>
-                </div>
-            </div>
-
-            <!-- Producto 9 -->
-            <div class="card">
-                <img src="Aceite de aloe vera estabilizado.png" alt="Aceite de Aloe Vera Estabilizado" class="card-img">
-                <h2 class="card-title">Aceite de Aloe Vera Estabilizado</h2>
-                <p class="card-description">Regenerador epitelial y mucoso. Ideal para digestión y cuidado de la piel.</p>
-                <div class="card-actions">
-                    <a href="aloe-vera.html" class="btn-primary">Detalles</a>
-                </div>
-            </div>
-
-            <!-- Producto 10 -->
-            <div class="card">
-                <img src="clavo-olor.png" alt="Extracto de Clavo de Olor" class="card-img">
-                <h2 class="card-title">Extracto de Clavo de Olor</h2>
-                <p class="card-description">Concentrado rico en eugenol. Propiedades analgésicas y digestivas.</p>
-                <div class="card-actions">
-                    <a href="clavo-olor.html" class="btn-primary">Detalles</a>
-                </div>
-            </div>
-
-            <!-- Producto 11 -->
-            <div class="card">
-                <img src="menta.png" alt="Extracto de Menta" class="card-img">
-                <h2 class="card-title">Extracto de Menta</h2>
-                <p class="card-description">Acción refrescante, espasmolítica y descongestionante bucofaríngea.</p>
-                <div class="card-actions">
-                    <a href="menta.html" class="btn-primary">Detalles</a>
-                </div>
-            </div>
-
-            <!-- Producto 12 -->
-            <div class="card">
-                <img src="neem.png" alt="Extracto de Neem" class="card-img">
-                <h2 class="card-title">Extracto de Neem</h2>
-                <p class="card-description">Purificante natural, regulador metabólico de la glucosa y protector cutáneo.</p>
-                <div class="card-actions">
-                    <a href="neem.html" class="btn-primary">Detalles</a>
-                </div>
-            </div>
-
-            <!-- Producto 13 -->
-            <div class="card">
-                <img src="oregano.png" alt="Extracto de Orégano" class="card-img">
-                <h2 class="card-title">Extracto de Orégano (Aceite Medicinal)</h2>
-                <p class="card-description">Alto en carvacrol. Antiséptico y antimicrobiano natural de amplio espectro.</p>
-                <div class="card-actions">
-                    <a href="oregano.html" class="btn-primary">Detalles</a>
-                </div>
-            </div>
-
+  <!-- CATÁLOGO DE PRODUCTOS -->
+  <section id="catalogo" class="products-section">
+    <div class="container">
+      <h2 class="section-title">Nuestros Productos</h2>
+      <div class="grid">
+        
+        <!-- Tarjeta 1 -->
+        <div class="card">
+          <div class="card-img-wrapper">
+            <img src="ajo-negro.png" alt="Extracto Fluido de Ajo Negro">
+          </div>
+          <div class="card-content">
+            <h3>Extracto Fluido de Ajo Negro</h3>
+            <p>Potente antioxidante natural que apoya el sistema cardiovascular e inmunológico.</p>
+            <a href="#" class="btn-card">Detalles</a>
+          </div>
         </div>
-    </main>
 
-    <footer>
-        <p>&copy; 2026 Pronaper. Todos los derechos reservados.</p>
-    </footer>
+        <!-- Tarjeta 2 -->
+        <div class="card">
+          <div class="card-img-wrapper">
+            <img src="cebolla-negra.png" alt="Extracto Fluido de Cebolla Negra">
+          </div>
+          <div class="card-content">
+            <h3>Extracto Fluido de Cebolla Negra</h3>
+            <p>Rico en flavonoides y quercetina. Soporte respiratorio y microcirculatorio.</p>
+            <a href="#" class="btn-card">Detalles</a>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="card">
+          <div class="card-img-wrapper">
+            <img src="limon-negro.png" alt="Extracto de Limón Negro">
+          </div>
+          <div class="card-content">
+            <h3>Extracto de Limón Negro</h3>
+            <p>Alto contenido de Vitamina C concentrada y polifenoles desintoxicantes.</p>
+            <a href="#" class="btn-card">Detalles</a>
+          </div>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="card">
+          <div class="card-img-wrapper">
+            <img src="ajo-negro-con-miel.png" alt="Ajo Negro con Miel">
+          </div>
+          <div class="card-content">
+            <h3>Ajo Negro con Miel</h3>
+            <p>Fusión sinérgica ideal para reforzar defensas y aportar energía natural diario.</p>
+            <a href="#" class="btn-card">Detalles</a>
+          </div>
+        </div>
+
+        <!-- Tarjeta 5 -->
+        <div class="card">
+          <div class="card-img-wrapper">
+            <img src="mucuna.png" alt="Mucuna Pruriens">
+          </div>
+          <div class="card-content">
+            <h3>Mucuna Pruriens</h3>
+            <p>Extracto natural precursor de dopamina para el equilibrio neurológico.</p>
+            <a href="#" class="btn-card">Detalles</a>
+          </div>
+        </div>
+
+        <!-- Tarjeta 6 -->
+        <div class="card">
+          <div class="card-img-wrapper">
+            <img src="aceite-de-ricino-extra-virgen.png" alt="Aceite de Ricino Extra Virgen">
+          </div>
+          <div class="card-content">
+            <h3>Aceite de Ricino Extra Virgen</h3>
+            <p>Puro prensado en frío para cuidado capilar, dérmico y aplicación terapéutica.</p>
+            <a href="#" class="btn-card">Detalles</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
