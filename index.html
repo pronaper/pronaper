@@ -4,10 +4,201 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pronaper | Productos Naturales para la Salud</title>
-  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Tipografía Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* RESET Y BASES */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    /* CONTROL DE IMÁGENES (Evita que se agiganten) */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ENCABEZADO Y NAVEGACIÓN */
+    .navbar {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+    .logo-bold {
+      font-weight: 700;
+      color: #166534;
+    }
+    .logo-light {
+      font-weight: 400;
+      color: #334155;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #475569;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: #166534;
+    }
+    .btn-primary {
+      background-color: #166534;
+      color: #ffffff !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 6px;
+      transition: background-color 0.2s;
+    }
+    .btn-primary:hover {
+      background-color: #14532d;
+    }
+
+    /* SECCIÓN HERO */
+    .hero {
+      background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .badge {
+      background-color: #dcfce7;
+      color: #15803d;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #0f172a;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.125rem;
+      color: #475569;
+      margin-bottom: 2rem;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .btn-secondary {
+      background-color: #ffffff;
+      color: #334155 !important;
+      border: 1px solid #cbd5e1;
+      padding: 0.5rem 1.25rem;
+      border-radius: 6px;
+    }
+
+    /* CATÁLOGO DE PRODUCTOS */
+    .products-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: #0f172a;
+      margin-bottom: 2.5rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    .card-img-wrapper {
+      width: 100%;
+      height: 240px;
+      background-color: #f1f5f9;
+      overflow: hidden;
+    }
+    .card-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .card-content h3 {
+      font-size: 1.25rem;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+    }
+    .card-content p {
+      color: #64748b;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+    .btn-card {
+      text-align: center;
+      background-color: #f1f5f9;
+      color: #1e293b;
+      text-decoration: none;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background-color 0.2s;
+    }
+    .btn-card:hover {
+      background-color: #e2e8f0;
+    }
+  </style>
 </head>
 <body>
 
@@ -20,7 +211,6 @@
       <nav class="nav-links">
         <a href="index.html" class="active">Inicio</a>
         <a href="#catalogo">Catálogo</a>
-        <a href="#nosotros">Nosotros</a>
         <a href="#contacto" class="btn-primary">Contacto</a>
       </nav>
     </div>
@@ -34,90 +224,87 @@
       <p>Descubre nuestra línea de extractos de alta pureza diseñados para optimizar tu bienestar general y respuesta inmunológica.</p>
       <div class="hero-buttons">
         <a href="#catalogo" class="btn-primary">Ver Productos</a>
-        <a href="#nosotros" class="btn-secondary">Saber Más</a>
       </div>
     </div>
   </section>
 
   <!-- CATÁLOGO DE PRODUCTOS -->
   <section id="catalogo" class="products-section">
-    <div class="container">
-      <h2 class="section-title">Nuestros Productos</h2>
-      <div class="grid">
-        
-        <!-- Tarjeta 1 -->
-        <div class="card">
-          <div class="card-img-wrapper">
-            <img src="ajo-negro.png" alt="Extracto Fluido de Ajo Negro">
-          </div>
-          <div class="card-content">
-            <h3>Extracto Fluido de Ajo Negro</h3>
-            <p>Potente antioxidante natural que apoya el sistema cardiovascular e inmunológico.</p>
-            <a href="#" class="btn-card">Detalles</a>
-          </div>
+    <h2 class="section-title">Nuestros Productos</h2>
+    <div class="grid">
+      
+      <!-- Tarjeta 1 -->
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img src="ajo-negro.png" alt="Extracto Fluido de Ajo Negro">
         </div>
-
-        <!-- Tarjeta 2 -->
-        <div class="card">
-          <div class="card-img-wrapper">
-            <img src="cebolla-negra.png" alt="Extracto Fluido de Cebolla Negra">
-          </div>
-          <div class="card-content">
-            <h3>Extracto Fluido de Cebolla Negra</h3>
-            <p>Rico en flavonoides y quercetina. Soporte respiratorio y microcirculatorio.</p>
-            <a href="#" class="btn-card">Detalles</a>
-          </div>
+        <div class="card-content">
+          <h3>Extracto Fluido de Ajo Negro</h3>
+          <p>Potente antioxidante natural que apoya el sistema cardiovascular e inmunológico.</p>
+          <a href="ajo-negro.html" class="btn-card">Detalles</a>
         </div>
-
-        <!-- Tarjeta 3 -->
-        <div class="card">
-          <div class="card-img-wrapper">
-            <img src="limon-negro.png" alt="Extracto de Limón Negro">
-          </div>
-          <div class="card-content">
-            <h3>Extracto de Limón Negro</h3>
-            <p>Alto contenido de Vitamina C concentrada y polifenoles desintoxicantes.</p>
-            <a href="#" class="btn-card">Detalles</a>
-          </div>
-        </div>
-
-        <!-- Tarjeta 4 -->
-        <div class="card">
-          <div class="card-img-wrapper">
-            <img src="ajo-negro-con-miel.png" alt="Ajo Negro con Miel">
-          </div>
-          <div class="card-content">
-            <h3>Ajo Negro con Miel</h3>
-            <p>Fusión sinérgica ideal para reforzar defensas y aportar energía natural diario.</p>
-            <a href="#" class="btn-card">Detalles</a>
-          </div>
-        </div>
-
-        <!-- Tarjeta 5 -->
-        <div class="card">
-          <div class="card-img-wrapper">
-            <img src="mucuna.png" alt="Mucuna Pruriens">
-          </div>
-          <div class="card-content">
-            <h3>Mucuna Pruriens</h3>
-            <p>Extracto natural precursor de dopamina para el equilibrio neurológico.</p>
-            <a href="#" class="btn-card">Detalles</a>
-          </div>
-        </div>
-
-        <!-- Tarjeta 6 -->
-        <div class="card">
-          <div class="card-img-wrapper">
-            <img src="aceite-de-ricino-extra-virgen.png" alt="Aceite de Ricino Extra Virgen">
-          </div>
-          <div class="card-content">
-            <h3>Aceite de Ricino Extra Virgen</h3>
-            <p>Puro prensado en frío para cuidado capilar, dérmico y aplicación terapéutica.</p>
-            <a href="#" class="btn-card">Detalles</a>
-          </div>
-        </div>
-
       </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img src="cebolla-negra.png" alt="Extracto Fluido de Cebolla Negra">
+        </div>
+        <div class="card-content">
+          <h3>Extracto Fluido de Cebolla Negra</h3>
+          <p>Rico en flavonoides y quercetina. Soporte respiratorio y microcirculatorio.</p>
+          <a href="#" class="btn-card">Detalles</a>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img src="limon-negro.png" alt="Extracto de Limón Negro">
+        </div>
+        <div class="card-content">
+          <h3>Extracto de Limón Negro</h3>
+          <p>Alto contenido de Vitamina C concentrada y polifenoles desintoxicantes.</p>
+          <a href="limon-negro.html" class="btn-card">Detalles</a>
+        </div>
+      </div>
+
+      <!-- Tarjeta 4 -->
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img src="miel-de-abeja-con-ajo-negro.png" alt="Ajo Negro con Miel">
+        </div>
+        <div class="card-content">
+          <h3>Ajo Negro con Miel</h3>
+          <p>Fusión sinérgica ideal para reforzar defensas y aportar energía natural diario.</p>
+          <a href="miel-ajo-negro.html" class="btn-card">Detalles</a>
+        </div>
+      </div>
+
+      <!-- Tarjeta 5 -->
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img src="mucuna.png" alt="Mucuna Pruriens">
+        </div>
+        <div class="card-content">
+          <h3>Mucuna Pruriens</h3>
+          <p>Extracto natural precursor de dopamina para el equilibrio neurológico.</p>
+          <a href="#" class="btn-card">Detalles</a>
+        </div>
+      </div>
+
+      <!-- Tarjeta 6 -->
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img src="aceite-de-ricino-extra-virgen.png" alt="Aceite de Ricino Extra Virgen">
+        </div>
+        <div class="card-content">
+          <h3>Aceite de Ricino Extra Virgen</h3>
+          <p>Puro prensado en frío para cuidado capilar, dérmico y aplicación terapéutica.</p>
+          <a href="#" class="btn-card">Detalles</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
