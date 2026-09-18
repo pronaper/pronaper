@@ -3,90 +3,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catálogo | Pronaper</title>
+  <title>Pronaper | Productos Naturales para la Salud</title>
   <style>
     :root {
       --primary-color: #0b3c3d;
       --secondary-color: #f4f6f5;
+      --accent-color: #e2a03f;
       --text-color: #333333;
       --light-text: #ffffff;
       --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--font-family); color: var(--text-color); background: #f9f9f9; }
+    body { font-family: var(--font-family); color: var(--text-color); background-color: #ffffff; }
     a { text-decoration: none; color: inherit; }
 
-    /* NAVEGACIÓN */
+    /* BARRA SUPERIOR */
+    .top-bar {
+      background-color: var(--primary-color);
+      color: var(--light-text);
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+    }
+
+    /* NAVEGACIÓN PRINCIPAL */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 10px 5%;
       border-bottom: 1px solid #e0e0e0;
-      background: #fff;
       position: sticky;
       top: 0;
+      background: #fff;
       z-index: 100;
     }
 
-    .logo-img { height: 60px; object-fit: contain; }
+    .logo-img { height: 75px; display: block; object-fit: contain; }
 
-    .nav-links {
-      display: flex;
-      gap: 24px;
-      list-style: none;
-    }
-
+    .nav-links { display: flex; gap: 24px; list-style: none; }
     .nav-links a { font-weight: 500; font-size: 0.95rem; }
 
-    /* CONTENEDOR DEL CATÁLOGO */
-    .catalog-container {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
+    /* HERO SECTION */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 5%;
+      background-color: var(--secondary-color);
+      min-height: 450px;
     }
 
-    .catalog-title {
-      text-align: center;
-      font-size: 2.2rem;
-      color: var(--primary-color);
-      margin-bottom: 30px;
-    }
+    .hero-text { max-width: 500px; }
+    .hero-text h1 { font-size: 2.8rem; color: var(--primary-color); margin-bottom: 16px; line-height: 1.2; }
+    .hero-text p { font-size: 1.1rem; margin-bottom: 24px; color: #555; }
 
-    /* GALERÍA DE IMÁGENES DEL CATÁLOGO */
-    .catalog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: var(--light-text);
+      padding: 12px 28px;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: background 0.3s;
     }
+    .btn-primary:hover { background-color: #145556; }
 
-    .catalog-item {
-      background: #fff;
+    .hero-image {
+      width: 45%;
+      height: 320px;
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .catalog-item img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
+    .hero-image img { width: 100%; height: 100%; object-fit: contain; }
+
+    /* BANDERAS DE BENEFICIOS */
+    .features {
+      display: flex;
+      justify-content: space-around;
+      padding: 24px 5%;
+      background-color: var(--primary-color);
+      color: var(--light-text);
+      font-size: 0.9rem;
+      text-align: center;
     }
+
+    /* PRODUCTOS */
+    .section-title { text-align: center; font-size: 2rem; color: var(--primary-color); margin: 40px 0 20px; }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      padding: 0 5% 60px;
+    }
+
+    .product-card {
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .product-card:hover { transform: translateY(-4px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+
+    .product-image {
+      width: 100%;
+      height: 200px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+      object-fit: contain;
+      background-color: #fafafa;
+    }
+
+    .product-title { font-weight: 600; margin-bottom: 8px; }
+    .product-price { color: var(--primary-color); font-weight: bold; margin-bottom: 12px; }
 
     /* FOOTER */
     footer {
       background-color: #1a1a1a;
       color: #aaa;
-      text-align: center;
-      padding: 20px;
-      margin-top: 50px;
+      padding: 40px 5% 20px;
       font-size: 0.9rem;
     }
+
+    .footer-columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .footer-col h4 { color: #fff; margin-bottom: 12px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 8px; }
+
+    .copyright { text-align: center; padding-top: 20px; border-top: 1px solid #333; }
   </style>
 </head>
 <body>
+
+  <!-- BARRA SUPERIOR -->
+  <div class="top-bar">
+    Productos 100% Naturales para tu salud | Envíos garantizados
+  </div>
 
   <!-- NAVEGACIÓN -->
   <nav class="navbar">
@@ -94,34 +159,92 @@
       <img src="pronaper logo.png" alt="Pronaper Logo" class="logo-img">
     </a>
     <ul class="nav-links">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="catalogo.html" style="color: var(--primary-color); font-weight: bold;">Catálogo</a></li>
-      <li><a href="index.html#contacto">Contacto</a></li>
+      <li><a href="index.html" style="color: var(--primary-color); font-weight: bold;">Inicio</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
 
-  <!-- SECCIÓN CATÁLOGO -->
-  <main class="catalog-container">
-    <h1 class="catalog-title">Catálogo de Productos</h1>
-
-    <div class="catalog-grid">
-      <div class="catalog-item"><img src="catalogo 1.jpg" alt="Catálogo 1"></div>
-      <div class="catalog-item"><img src="catalogo 2.jpg" alt="Catálogo 2"></div>
-      <div class="catalog-item"><img src="catalogo 3.jpg" alt="Catálogo 3"></div>
-      <div class="catalog-item"><img src="catalogo 4.jpg" alt="Catálogo 4"></div>
-      <div class="catalog-item"><img src="catalogo 5.jpg" alt="Catálogo 5"></div>
-      <div class="catalog-item"><img src="catalogo 6.jpg" alt="Catálogo 6"></div>
-      <div class="catalog-item"><img src="catalogo 7.jpg" alt="Catálogo 7"></div>
-      <div class="catalog-item"><img src="catalogo 8.jpg" alt="Catálogo 8"></div>
-      <div class="catalog-item"><img src="catalogo 9.jpg" alt="Catálogo 9"></div>
-      <div class="catalog-item"><img src="catalogo 10.jpg" alt="Catálogo 10"></div>
-      <div class="catalog-item"><img src="catalogo 11.jpg" alt="Catálogo 11"></div>
-      <div class="catalog-item"><img src="catalogo 13.jpg" alt="Catálogo 13"></div>
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Salud y bienestar natural a tu alcance</h1>
+      <p>Especialistas en la fabricación de extractos naturales y botánicos concentrados para cuidar de ti.</p>
+      <a href="catalogo.html" class="btn-primary">Ver catálogo</a>
     </div>
-  </main>
+    <div class="hero-image">
+      <img src="AJO NEGRO 2.png" alt="Productos Pronaper">
+    </div>
+  </header>
 
-  <footer>
-    © 2026 Pronaper. Todos los derechos reservados.
+  <!-- LISTA DE VALORES -->
+  <section class="features">
+    <div>✔ 100% Natural</div>
+    <div>✔ Extractos Concentrados</div>
+    <div>✔ Calidad Garantizada</div>
+    <div>✔ Envío Rápido</div>
+  </section>
+
+  <!-- PRODUCTOS ESTRELLA -->
+  <h2 class="section-title">Nuestros Productos Estrella</h2>
+  <section class="product-grid">
+    <div class="product-card">
+      <img src="ajo negro.png" alt="Extracto de Ajo Negro" class="product-image">
+      <div class="product-title">Extracto de Ajo Negro</div>
+      <div class="product-price">Consultar</div>
+      <a href="catalogo.html" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
+    </div>
+
+    <div class="product-card">
+      <img src="cebolla negra.png" alt="Extracto de Cebolla Negra" class="product-image">
+      <div class="product-title">Extracto de Cebolla Negra</div>
+      <div class="product-price">Consultar</div>
+      <a href="catalogo.html" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
+    </div>
+
+    <div class="product-card">
+      <img src="limón negro.png" alt="Extracto de Limón Negro" class="product-image">
+      <div class="product-title">Extracto de Limón Negro</div>
+      <div class="product-price">Consultar</div>
+      <a href="catalogo.html" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
+    </div>
+
+    <div class="product-card">
+      <img src="miel de abeja con ajo negro.png" alt="Ajo Negro con Miel" class="product-image">
+      <div class="product-title">Ajo Negro con Miel</div>
+      <div class="product-price">Consultar</div>
+      <a href="catalogo.html" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer id="contacto">
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4>Atención al Cliente</h4>
+        <ul>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#">Envíos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Pronaper</h4>
+        <ul>
+          <li><a href="nosotros.html">Sobre nosotros</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Políticas de privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 Pronaper. Todos los derechos reservados.
+    </div>
   </footer>
 
 </body>
