@@ -114,15 +114,41 @@
       height: auto;
       max-height: 350px;
       border-radius: 6px;
-      margin-bottom: 12px;
       object-fit: contain;
       background-color: #fafafa;
+      cursor: pointer;
     }
 
-    .product-title {
-      font-weight: 600;
-      margin-bottom: 4px;
-      font-size: 1.05rem;
+    /* VENTANA MODAL / ZOOM DE IMAGEN */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox-content {
+      max-width: 90%;
+      max-height: 90vh;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
     }
 
     /* FOOTER */
@@ -164,69 +190,26 @@
     <h1>Catálogo de Productos</h1>
 
     <div class="product-grid">
-
-      <div class="product-card">
-        <img src="catalogo1.jpg" alt="Extracto de Ajo Negro" class="product-image">
-        <div class="product-title">Extracto de Ajo Negro</div>
-      </div>
-
-      <div class="product-card">
-        <img src="catalogo2.jpg" alt="Extracto de Cebolla Negra" class="product-image">
-        <div class="product-title">Extracto de Cebolla Negra</div>
-      </div>
-
-      <div class="product-card">
-        <img src="catalogo3.jpg" alt="Extracto de Limón Negro" class="product-image">
-        <div class="product-title">Extracto de Limón Negro</div>
-      </div>
-
-      <div class="product-card">
-        <img src="catalogo4.jpg" alt="Ajo Negro con Miel" class="product-image">
-        <div class="product-title">Ajo Negro con Miel</div>
-      </div>
-
-      <div class="product-card">
-        <img src="catalogo5.jpg" alt="Miel de Abeja con Ajo Negro" class="product-image">
-        <div class="product-title">Miel con Ajo Negro</div>
-      </div>
-
-      <div class="product-card">
-        <img src="catalogo6.jpg" alt="Extracto de Mucuna" class="product-image">
-        <div class="product-title">Extracto de Mucuna</div>
-      </div>
-
-      <div class="product-card">
-        <img src="catalogo7.jpg" alt="Extracto de Ricino" class="product-image">
-        <div class="product-title">Extracto de Ricino</div>
-      </div>
-
-      <div class="product-card">
-        <img src="catalogo8.jpg" alt="Aceite Medicinal de Coco Extra Virgen" class="product-image">
-        <div class="product-title">Aceite Medicinal de Coco</div>
-      </div>
-
-      <div class="product-card">
-        <img src="catalogo9.jpg" alt="Aceite de Linaza Extra Virgen" class="product-image">
-        <div class="product-title">Aceite de Linaza Extra Virgen</div>
-      </div>
-
-      <div class="product-card">
-        <img src="catalogo10.jpg" alt="Aceite de Aloe Vera Estabilizado" class="product-image">
-        <div class="product-title">Aceite de Aloe Vera</div>
-      </div>
-
-      <div class="product-card">
-        <img src="catalogo11.jpg" alt="Extracto de Clavo de Olor" class="product-image">
-        <div class="product-title">Extracto de Clavo de Olor</div>
-      </div>
-
-      <div class="product-card">
-        <img src="catalogo13.jpg" alt="Extracto de Neem" class="product-image">
-        <div class="product-title">Extracto de Neem</div>
-      </div>
-
+      <div class="product-card"><img src="catalogo1.jpg" alt="Producto Pronaper" class="product-image" onclick="openLightbox(this)"></div>
+      <div class="product-card"><img src="catalogo2.jpg" alt="Producto Pronaper" class="product-image" onclick="openLightbox(this)"></div>
+      <div class="product-card"><img src="catalogo3.jpg" alt="Producto Pronaper" class="product-image" onclick="openLightbox(this)"></div>
+      <div class="product-card"><img src="catalogo4.jpg" alt="Producto Pronaper" class="product-image" onclick="openLightbox(this)"></div>
+      <div class="product-card"><img src="catalogo5.jpg" alt="Producto Pronaper" class="product-image" onclick="openLightbox(this)"></div>
+      <div class="product-card"><img src="catalogo6.jpg" alt="Producto Pronaper" class="product-image" onclick="openLightbox(this)"></div>
+      <div class="product-card"><img src="catalogo7.jpg" alt="Producto Pronaper" class="product-image" onclick="openLightbox(this)"></div>
+      <div class="product-card"><img src="catalogo8.jpg" alt="Producto Pronaper" class="product-image" onclick="openLightbox(this)"></div>
+      <div class="product-card"><img src="catalogo9.jpg" alt="Producto Pronaper" class="product-image" onclick="openLightbox(this)"></div>
+      <div class="product-card"><img src="catalogo10.jpg" alt="Producto Pronaper" class="product-image" onclick="openLightbox(this)"></div>
+      <div class="product-card"><img src="catalogo11.jpg" alt="Producto Pronaper" class="product-image" onclick="openLightbox(this)"></div>
+      <div class="product-card"><img src="catalogo13.jpg" alt="Producto Pronaper" class="product-image" onclick="openLightbox(this)"></div>
     </div>
   </main>
+
+  <!-- LIGHTBOX PARA VER IMAGEN EN GRANDE -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" class="lightbox-content">
+  </div>
 
   <!-- FOOTER -->
   <footer>
@@ -234,6 +217,19 @@
       © 2026 Pronaper. Todos los derechos reservados.
     </div>
   </footer>
+
+  <script>
+    function openLightbox(element) {
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = document.getElementById('lightbox-img');
+      lightbox.style.display = 'flex';
+      lightboxImg.src = element.src;
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
 
 </body>
 </html>
