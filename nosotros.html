@@ -8,7 +8,8 @@
     :root {
       --primary-color: #0b3c3d;
       --secondary-color: #f4f6f5;
-      --text-color: #222222;
+      --accent-color: #e2a03f;
+      --text-color: #333333;
       --light-text: #ffffff;
       --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
@@ -23,7 +24,6 @@
       font-family: var(--font-family);
       color: var(--text-color);
       background-color: #ffffff;
-      line-height: 1.6;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -43,7 +43,7 @@
       font-size: 0.85rem;
     }
 
-    /* NAVEGACIÓN */
+    /* NAVEGACIÓN PRINCIPAL */
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -73,18 +73,24 @@
       font-size: 0.95rem;
     }
 
-    /* CONTENIDO SOBRE NOSOTROS */
+    .nav-icons {
+      display: flex;
+      gap: 16px;
+      font-size: 1.1rem;
+    }
+
+    /* CONTENIDO PRINCIPAL */
     .about-container {
-      max-width: 800px;
+      max-width: 900px;
       width: 100%;
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 50px 20px;
       flex: 1;
     }
 
     .about-container h1 {
       color: var(--primary-color);
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       margin-bottom: 20px;
       text-align: center;
     }
@@ -92,36 +98,14 @@
     .about-container h2 {
       color: var(--primary-color);
       font-size: 1.5rem;
-      margin: 32px 0 16px;
+      margin: 30px 0 15px 0;
     }
 
     .about-container p {
       font-size: 1.05rem;
-      color: #222222;
-      margin-bottom: 16px;
-    }
-
-    .about-container ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .about-container ul li {
-      font-size: 1.05rem;
-      color: #222222;
-      margin-bottom: 12px;
-      padding-left: 20px;
-      position: relative;
-    }
-
-    .about-container ul li::before {
-      content: "•";
-      color: var(--primary-color);
-      font-weight: bold;
-      font-size: 1.2rem;
-      position: absolute;
-      left: 0;
-      top: -2px;
+      line-height: 1.7;
+      color: #444444;
+      margin-bottom: 18px;
     }
 
     /* FOOTER */
@@ -152,27 +136,28 @@
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Inicio</a></li>
-      <li><a href="index.html#productos">Catálogo</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
       <li><a href="nosotros.html">Nosotros</a></li>
-      <li><a href="index.html#contacto">Contacto</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
     </ul>
+    <div class="nav-icons">
+      <span>🔍</span>
+      <span>👤</span>
+      <span>🛒</span>
+    </div>
   </nav>
 
   <!-- CONTENIDO Principal -->
   <main class="about-container">
     <h1>🍃 Sobre Nosotros</h1>
-    <p><strong>Pronaper (Productos Naturales Pérez, F.P.)</strong> nace de la pasión por la medicina natural y el deseo de ofrecer soluciones reales a las necesidades de salud cotidianas.</p>
-    <p>Nacimos con la convicción de que la naturaleza alberga las respuestas para una vida más plena y saludable. Hoy en día, nos dedicamos a la formulación, elaboración y comercialización de extractos botánicos y aceites medicinales de alta pureza, convirtiéndonos en aliados de quienes eligen cuidar su cuerpo de manera consciente y natural. Creemos firmemente en el poder de la naturaleza para restaurar y mantener la salud integral.</p>
+    <p><strong>Pronaper (Productos Naturales Pérez, F.P.)</strong> nace de la pasión y compromiso por brindar alternativas naturales y de alta calidad para el bienestar y la salud integral.</p>
+    <p>Nacimos con la convicción de que la naturaleza alberga las respuestas para una vida en plena armonía y equilibrio. Nos especializamos en la formulación, extracción y comercialización de principios activos botánicos pura y concentradamente procesados.</p>
+    
+    <h2>🎯 Nuestra Misión</h2>
+    <p>Proporcionar a nuestros clientes extractos naturales y aceites medicinales con los más altos estándares de calidad, garantizando procesos que mantengan intactas las propiedades curativas de la naturaleza.</p>
 
-    <h2>👁️ Nuestra Visión</h2>
-    <p>Ser una empresa referente en la elaboración y distribución de bioextractos y aceites medicinales, reconocida por la pureza de nuestras fórmulas, la calidad de nuestros procesos y el compromiso constante con la salud de nuestros clientes.</p>
-
-    <h2>💡 Nuestros Valores</h2>
-    <ul>
-      <li><strong>Pureza y Calidad:</strong> Aplicamos procesos artesanales y rigurosos controles de calidad en cada elaboración.</li>
-      <li><strong>Compromiso con el Bienestar:</strong> Enfocamos nuestro trabajo en mejorar la salud y la calidad de vida de las personas.</li>
-      <li><strong>Innovación Botánica:</strong> Potenciamos las propiedades de los ingredientes naturales tradicionales para ofrecer productos de alta eficacia.</li>
-    </ul>
+    <h2>👁 Nuestra Visión</h2>
+    <p>Ser una empresa referente en la elaboración y distribución de bioextractos y aceites botánicos medicinales, destacándonos por la confianza, transparencia y satisfacción de nuestros clientes.</p>
   </main>
 
   <!-- FOOTER -->
