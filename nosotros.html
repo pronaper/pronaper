@@ -85,14 +85,43 @@
     .about-container h1 {
       color: var(--primary-color);
       font-size: 2.2rem;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       text-align: center;
+    }
+
+    .about-container h2 {
+      color: var(--primary-color);
+      font-size: 1.5rem;
+      margin: 32px 0 16px;
     }
 
     .about-container p {
       font-size: 1.05rem;
       color: #222222;
       margin-bottom: 16px;
+    }
+
+    .about-container ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .about-container ul li {
+      font-size: 1.05rem;
+      color: #222222;
+      margin-bottom: 12px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .about-container ul li::before {
+      content: "•";
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 1.2rem;
+      position: absolute;
+      left: 0;
+      top: -2px;
     }
 
     /* FOOTER */
@@ -129,11 +158,21 @@
     </ul>
   </nav>
 
-  <!-- CONTENIDO -->
+  <!-- CONTENIDO Principal -->
   <main class="about-container">
-    <h1>Sobre Pronaper</h1>
-    <p>En Pronaper nos dedicamos a la formulación y elaboración de productos y extractos 100% naturales, elaborados con altos estándares de pureza y calidad para favorecer el bienestar y la salud de nuestros clientes.</p>
-    <p>Nuestra misión es acercar los beneficios de la medicina botánica y concentrados naturales a cada hogar, garantizando procesos respetuosos con la materia prima y enfocados en brindar resultados efectivos.</p>
+    <h1>🍃 Sobre Nosotros</h1>
+    <p><strong>Pronaper (Productos Naturales Pérez, F.P.)</strong> nace de la pasión por la medicina natural y el deseo de ofrecer soluciones reales a las necesidades de salud cotidianas.</p>
+    <p>Nacimos con la convicción de que la naturaleza alberga las respuestas para una vida más plena y saludable. Hoy en día, nos dedicamos a la formulación, elaboración y comercialización de extractos botánicos y aceites medicinales de alta pureza, convirtiéndonos en aliados de quienes eligen cuidar su cuerpo de manera consciente y natural. Creemos firmemente en el poder de la naturaleza para restaurar y mantener la salud integral.</p>
+
+    <h2>👁️ Nuestra Visión</h2>
+    <p>Ser una empresa referente en la elaboración y distribución de bioextractos y aceites medicinales, reconocida por la pureza de nuestras fórmulas, la calidad de nuestros procesos y el compromiso constante con la salud de nuestros clientes.</p>
+
+    <h2>💡 Nuestros Valores</h2>
+    <ul>
+      <li><strong>Pureza y Calidad:</strong> Aplicamos procesos artesanales y rigurosos controles de calidad en cada elaboración.</li>
+      <li><strong>Compromiso con el Bienestar:</strong> Enfocamos nuestro trabajo en mejorar la salud y la calidad de vida de las personas.</li>
+      <li><strong>Innovación Botánica:</strong> Potenciamos las propiedades de los ingredientes naturales tradicionales para ofrecer productos de alta eficacia.</li>
+    </ul>
   </main>
 
   <!-- FOOTER -->
