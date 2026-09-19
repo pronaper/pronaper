@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Pronaper</title>
+  <style>
+    :root {
+      --primary-color: #0b3c3d;
+      --secondary-color: #f4f6f5;
+      --text-color: #222222;
+      --light-text: #ffffff;
+      --accent-color: #25d366;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      color: var(--text-color);
+      background-color: #ffffff;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* BARRA SUPERIOR */
+    .top-bar {
+      background-color: var(--primary-color);
+      color: var(--light-text);
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+    }
+
+    /* NAVEGACIÓN */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 5%;
+      border-bottom: 1px solid #e0e0e0;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 100;
+    }
+
+    .logo-img {
+      height: 75px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    /* CONTENIDO PRINCIPAL */
+    .contact-container {
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex: 1;
+    }
+
+    .contact-container h1 {
+      color: var(--primary-color);
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 1.05rem;
+      color: #555;
+      margin-bottom: 36px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+
+    .contact-info {
+      background-color: var(--secondary-color);
+      padding: 28px;
+      border-radius: 8px;
+    }
+
+    .contact-info h2 {
+      color: var(--primary-color);
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-list {
+      list-style: none;
+    }
+
+    .contact-list li {
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+
+    .btn-link {
+      color: var(--primary-color);
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 350px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #ddd;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #1a1a1a;
+      color: #aaa;
+      padding: 30px 5%;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    .copyright {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR -->
+  <div class="top-bar">
+    Productos 100% Naturales para tu salud | Envíos garantizados
+  </div>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="navbar">
+    <a href="index.html">
+      <img src="pronaper-logo.png" alt="Pronaper Logo" class="logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENIDO -->
+  <main class="contact-container">
+    <h1>📞 Contáctanos</h1>
+    <p class="subtitle">¿Tienes dudas sobre nuestros productos o quieres realizar un pedido?<br>En Pronaper estamos listos para asesorarte y brindarte la mejor atención personalizada para tu salud y bienestar.</p>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>📍 Información de Contacto Directo</h2>
+        <ul class="contact-list">
+          <li>📱 <strong>WhatsApp Directo:</strong> <a href="https://wa.me/584144149073" target="_blank" class="btn-link">+58 414-4149073</a></li>
+          <li>📷 <strong>Instagram:</strong> <a href="https://instagram.com/pronaper_productos_naturales" target="_blank" class="btn-link">@pronaper_productos_naturales</a></li>
+          <li>🏢 <strong>Razón Social:</strong> Productos Naturales Pérez, F.P.</li>
+          <li>🚚 <strong>Atención:</strong> Ventas al mayor y al detal con envíos / entregas.</li>
+          <li>📍 <strong>Dirección:</strong> Estamos ubicados en la esquina de la calle Rangel con Soublette. La Candelaria, Valencia. (<a href="https://share.google/WlJzenvJQUiUBEUyl" target="_blank" class="btn-link">Ver en Google Maps</a>)</li>
+        </ul>
+      </div>
+
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.837380295712!2d-68.0069!3d10.1938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e805d762e850b55%3A0x6a1005a815a51980!2sCalle%20Rangel%2C%20Valencia!5e0!3m2!1ses!2sve!4v1700000000000!5m2!1ses!2sve" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="copyright">
+      © 2026 Pronaper. Todos los derechos reservados.
+    </div>
+  </footer>
+
+</body>
+</html>
