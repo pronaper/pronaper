@@ -24,6 +24,9 @@
       font-family: var(--font-family);
       color: var(--text-color);
       background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     a {
@@ -78,116 +81,85 @@
 
     /* HERO SECTION */
     .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 60px 5%;
       background-color: var(--secondary-color);
-      min-height: 450px;
+      padding: 60px 5%;
+      text-align: center;
+      border-bottom: 1px solid #e0e0e0;
     }
 
-    .hero-text {
-      max-width: 500px;
-    }
-
-    .hero-text h1 {
-      font-size: 2.8rem;
+    .hero-content h1 {
       color: var(--primary-color);
-      margin-bottom: 16px;
-      line-height: 1.2;
+      font-size: 2.2rem;
+      margin-bottom: 12px;
     }
 
-    .hero-text p {
-      font-size: 1.1rem;
-      margin-bottom: 24px;
+    .hero-content p {
+      font-size: 1.05rem;
       color: #555;
+      margin-bottom: 24px;
     }
 
     .btn-primary {
-      display: inline-block;
       background-color: var(--primary-color);
-      color: var(--light-text);
-      padding: 12px 28px;
+      color: #fff;
+      padding: 10px 20px;
       border-radius: 4px;
-      font-weight: 600;
+      font-weight: bold;
+      display: inline-block;
       transition: background 0.3s;
     }
 
     .btn-primary:hover {
-      background-color: #145556;
+      background-color: #062324;
     }
 
-    .hero-image {
-      width: 45%;
-      height: 320px;
-      border-radius: 8px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-image img {
+    /* SECCIÓN DESTACADOS */
+    .featured {
+      padding: 50px 5%;
+      max-width: 1200px;
+      margin: 0 auto;
       width: 100%;
-      height: 100%;
-      object-fit: contain;
     }
 
-    /* BANDERAS DE BENEFICIOS */
-    .features {
-      display: flex;
-      justify-content: space-around;
-      padding: 24px 5%;
-      background-color: var(--primary-color);
-      color: var(--light-text);
-      font-size: 0.9rem;
+    .featured h2 {
       text-align: center;
-    }
-
-    /* PRODUCTOS */
-    .section-title {
-      text-align: center;
-      font-size: 2rem;
       color: var(--primary-color);
-      margin: 40px 0 20px;
+      margin-bottom: 35px;
+      font-size: 1.8rem;
     }
 
     .product-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
-      padding: 0 5% 60px;
+      gap: 25px;
     }
 
     .product-card {
-      border: 1px solid #eee;
+      border: 1px solid #e0e0e0;
       border-radius: 8px;
       padding: 16px;
       text-align: center;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .product-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .product-image {
-      width: 100%;
-      height: 200px;
-      border-radius: 4px;
-      margin-bottom: 12px;
+      max-width: 100%;
+      height: 180px;
       object-fit: contain;
-      background-color: #fafafa;
+      margin-bottom: 12px;
     }
 
     .product-title {
-      font-weight: 600;
-      margin-bottom: 8px;
+      font-weight: bold;
+      margin-bottom: 6px;
+      font-size: 1rem;
     }
 
     .product-price {
-      color: var(--primary-color);
+      color: var(--accent-color);
       font-weight: bold;
       margin-bottom: 12px;
     }
@@ -196,15 +168,17 @@
     footer {
       background-color: #1a1a1a;
       color: #aaa;
-      padding: 40px 5% 20px;
+      padding: 40px 5% 20px 5%;
       font-size: 0.9rem;
+      margin-top: auto;
     }
 
-    .footer-columns {
+    .footer-content {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 30px;
-      margin-bottom: 40px;
+      max-width: 1200px;
+      margin: 0 auto 30px auto;
     }
 
     .footer-col h4 {
@@ -220,10 +194,18 @@
       margin-bottom: 8px;
     }
 
+    .footer-col a {
+      color: #aaa;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
     .copyright {
       text-align: center;
-      padding-top: 20px;
       border-top: 1px solid #333;
+      padding-top: 20px;
     }
   </style>
 </head>
@@ -240,6 +222,7 @@
       <img src="pronaper-logo.png" alt="Pronaper Logo" class="logo-img">
     </a>
     <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
       <li><a href="catalogo.html">Catálogo</a></li>
       <li><a href="nosotros.html">Nosotros</a></li>
       <li><a href="contacto.html">Contacto</a></li>
@@ -252,143 +235,72 @@
   </nav>
 
   <!-- HERO SECTION -->
-  <header class="hero">
-    <div class="hero-text">
-      <h1>Salud y bienestar natural a tu alcance</h1>
-      <p>Especialistas en la fabricación de extractos naturales y botánicos concentrados para cuidar de ti.</p>
-      <a href="catalogo.html" class="btn-primary">Ver catálogo</a>
-    </div>
-    <div class="hero-image">
-      <img src="ajo-negro2.png" alt="Productos Pronaper">
-    </div>
-  </header>
-
-  <!-- LISTA DE VALORES -->
-  <section class="features">
-    <div>✔ 100% Natural</div>
-    <div>✔ Extractos Concentrados</div>
-    <div>✔ Calidad Garantizada</div>
-    <div>✔ Envío Rápido</div>
-  </section>
-
-  <!-- PRODUCTOS -->
-  <h2 class="section-title" id="productos">Nuestros Productos Estrella</h2>
-  <section class="product-grid">
-    <div class="product-card">
-      <img src="ajo-negro.png" alt="Extracto de Ajo Negro" class="product-image">
-      <div class="product-title">Extracto de Ajo Negro</div>
-      <div class="product-price">Consultar</div>
-      <a href="ajo-negro.html" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
-    </div>
-
-    <div class="product-card">
-      <img src="cebolla-negra.png" alt="Extracto de Cebolla Negra" class="product-image">
-      <div class="product-title">Extracto de Cebolla Negra</div>
-      <div class="product-price">Consultar</div>
-      <a href="#" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
-    </div>
-
-    <div class="product-card">
-      <img src="limon-negro.png" alt="Extracto de Limón Negro" class="product-image">
-      <div class="product-title">Extracto de Limón Negro</div>
-      <div class="product-price">Consultar</div>
-      <a href="limon-negro.html" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
-    </div>
-
-    <div class="product-card">
-      <img src="miel-de-abeja-con-ajo-negro.png" alt="Ajo Negro con Miel" class="product-image">
-      <div class="product-title">Ajo Negro con Miel</div>
-      <div class="product-price">Consultar</div>
-      <a href="miel-ajo-negro.html" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
-    </div>
-
-    <div class="product-card">
-      <img src="mucuna.png" alt="Extracto de Mucuna" class="product-image">
-      <div class="product-title">Extracto de Mucuna</div>
-      <div class="product-price">Consultar</div>
-      <a href="mucuna.html" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
-    </div>
-
-    <div class="product-card">
-      <img src="ricino.png" alt="Extracto de Ricino" class="product-image">
-      <div class="product-title">Extracto de Ricino</div>
-      <div class="product-price">Consultar</div>
-      <a href="ricino.html" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
-    </div>
-
-    <div class="product-card">
-      <img src="aceite-medicinal-de-coco-extra-virgen.png" alt="Aceite de Coco Extra Virgen" class="product-image">
-      <div class="product-title">Aceite Medicinal de Coco</div>
-      <div class="product-price">Consultar</div>
-      <a href="aceite-coco.html" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
-    </div>
-
-    <div class="product-card">
-      <img src="aceite-de-linaza-extra-virgen.png" alt="Aceite de Linaza Extra Virgen" class="product-image">
-      <div class="product-title">Aceite de Linaza Extra Virgen</div>
-      <div class="product-price">Consultar</div>
-      <a href="aceite-linaza.html" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
-    </div>
-
-    <div class="product-card">
-      <img src="aceite-de-aloe-vera-estabilizado.png" alt="Aceite de Aloe Vera Estabilizado" class="product-image">
-      <div class="product-title">Aceite de Aloe Vera Estabilizado</div>
-      <div class="product-price">Consultar</div>
-      <a href="aloe-vera.html" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
-    </div>
-
-    <div class="product-card">
-      <img src="clavo-de-olor.png" alt="Extracto de Clavo de Olor" class="product-image">
-      <div class="product-title">Extracto de Clavo de Olor</div>
-      <div class="product-price">Consultar</div>
-      <a href="clavo-olor.html" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
-    </div>
-
-    <div class="product-card">
-      <img src="menta.png" alt="Extracto de Menta" class="product-image">
-      <div class="product-title">Extracto de Menta</div>
-      <div class="product-price">Consultar</div>
-      <a href="menta.html" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
-    </div>
-
-    <div class="product-card">
-      <img src="neem.png" alt="Extracto de Neem" class="product-image">
-      <div class="product-title">Extracto de Neem</div>
-      <div class="product-price">Consultar</div>
-      <a href="neem.html" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
-    </div>
-
-    <div class="product-card">
-      <img src="oregano.png" alt="Extracto de Orégano" class="product-image">
-      <div class="product-title">Extracto de Orégano</div>
-      <div class="product-price">Consultar</div>
-      <a href="oregano.html" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;">Detalles</a>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Extractos y Productos Naturales</h1>
+      <p>Descubre el poder de la naturaleza con nuestra selección de extractos concentrados y aceites medicinales.</p>
+      <a href="catalogo.html" class="btn-primary">Ver Catálogo Completo</a>
     </div>
   </section>
 
-  <!-- PIE DE PÁGINA -->
-  <footer id="contacto">
-    <div class="footer-columns">
-      <div class="footer-col">
-        <h4>Atención al Cliente</h4>
-        <ul>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="#">Envíos</a></li>
-          <li><a href="#">Preguntas frecuentes</a></li>
-        </ul>
+  <!-- SECCIÓN DESTACADOS -->
+  <section class="featured">
+    <h2>Productos Destacados</h2>
+    <div class="product-grid">
+      
+      <!-- TARJETA AJO NEGRO: Apunta exclusivamente a ajo-negro.html -->
+      <div class="product-card">
+        <img src="ajo-negro.png" alt="Extracto de Ajo Negro" class="product-image">
+        <div class="product-title">Extracto de Ajo Negro</div>
+        <div class="product-price">Consultar</div>
+        <a href="ajo-negro.html" class="btn-primary" style="font-size: 0.85rem; padding: 8px 16px;">Ver Detalles</a>
       </div>
+
+      <div class="product-card">
+        <img src="limon-negro.png" alt="Extracto de Limón Negro" class="product-image">
+        <div class="product-title">Extracto de Limón Negro</div>
+        <div class="product-price">Consultar</div>
+        <a href="catalogo.html" class="btn-primary" style="font-size: 0.85rem; padding: 8px 16px;">Ver Detalles</a>
+      </div>
+
+      <div class="product-card">
+        <img src="miel-de-abeja-con-ajo-negro.png" alt="Ajo Negro con Miel" class="product-image">
+        <div class="product-title">Ajo Negro con Miel</div>
+        <div class="product-price">Consultar</div>
+        <a href="catalogo.html" class="btn-primary" style="font-size: 0.85rem; padding: 8px 16px;">Ver Detalles</a>
+      </div>
+
+      <div class="product-card">
+        <img src="mucuna.png" alt="Extracto de Mucuna" class="product-image">
+        <div class="product-title">Extracto de Mucuna</div>
+        <div class="product-price">Consultar</div>
+        <a href="catalogo.html" class="btn-primary" style="font-size: 0.85rem; padding: 8px 16px;">Ver Detalles</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
       <div class="footer-col">
         <h4>Pronaper</h4>
+        <p>Especialistas en la elaboración y distribución de extractos naturales para tu bienestar.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Enlaces Rápidos</h4>
         <ul>
-          <li><a href="nosotros.html">Sobre nosotros</a></li>
-          <li><a href="#">Blog de salud</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Legal</h4>
+        <h4>Contacto</h4>
         <ul>
-          <li><a href="#">Aviso legal</a></li>
-          <li><a href="#">Políticas de privacidad</a></li>
+          <li>WhatsApp: <a href="https://wa.me/584144149073" target="_blank">+58 414-4149073</a></li>
+          <li>Instagram: <a href="https://instagram.com/pronaper_productos_naturales" target="_blank">@pronaper_productos_naturales</a></li>
         </ul>
       </div>
     </div>
