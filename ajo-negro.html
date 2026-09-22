@@ -3,226 +3,262 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Extracto Fluido de Ajo Negro | Pronaper</title>
+  <title>Extracto de Ajo Negro | Pronaper</title>
   <style>
     :root {
       --primary-color: #0b3c3d;
       --secondary-color: #f4f6f5;
+      --accent-color: #e2a03f;
       --text-color: #333333;
+      --light-text: #ffffff;
       --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--font-family); color: var(--text-color); background-color: #ffffff; line-height: 1.6; }
-    a { text-decoration: none; color: inherit; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    /* NAVEGACIÓN */
+    body {
+      font-family: var(--font-family);
+      color: var(--text-color);
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* BARRA SUPERIOR */
+    .top-bar {
+      background-color: var(--primary-color);
+      color: var(--light-text);
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+    }
+
+    /* NAVEGACIÓN PRINCIPAL */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 10px 5%;
       border-bottom: 1px solid #e0e0e0;
-      background: #fff;
       position: sticky;
       top: 0;
+      background: #fff;
       z-index: 100;
     }
 
-    .logo-img { height: 60px; object-fit: contain; }
-    .nav-links { display: flex; gap: 24px; list-style: none; }
-    .nav-links a { font-weight: 500; font-size: 0.95rem; }
+    .logo-img {
+      height: 75px;
+      display: block;
+      object-fit: contain;
+    }
 
-    /* CONTENEDOR PRINCIPAL */
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 16px;
+      font-size: 1.1rem;
+    }
+
+    /* CONTENIDO DEL PRODUCTO */
     .product-detail-container {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
+      flex: 1;
+    }
+
+    .breadcrumb {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .breadcrumb a {
+      color: var(--primary-color);
+    }
+
+    .product-main-grid {
       display: grid;
-      grid-template-columns: 1fr 1.3fr;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 40px;
-      align-items: start;
+      margin-bottom: 40px;
     }
 
-    .product-image-box {
-      background: #fafafa;
-      border: 1px solid #eee;
+    .product-image-container {
+      border: 1px solid #e0e0e0;
       border-radius: 8px;
-      padding: 24px;
+      padding: 20px;
       text-align: center;
-      position: sticky;
-      top: 90px;
+      background: #fff;
     }
 
-    .product-image-box img {
+    .product-image-container img {
       max-width: 100%;
       height: auto;
-      border-radius: 6px;
+      max-height: 350px;
+      object-fit: contain;
     }
 
-    .product-info h1 {
-      font-size: 2.2rem;
+    .product-summary h1 {
       color: var(--primary-color);
+      font-size: 2rem;
       margin-bottom: 10px;
     }
 
-    .subtitle {
-      font-size: 1.2rem;
+    .product-subtitle {
       font-weight: 600;
-      color: #666;
-      margin-bottom: 24px;
-      border-bottom: 2px solid var(--secondary-color);
-      padding-bottom: 8px;
+      color: var(--accent-color);
+      margin-bottom: 15px;
+      font-size: 1.1rem;
     }
 
-    .section-block {
-      margin-bottom: 24px;
-    }
-
-    .section-block h3 {
-      color: var(--primary-color);
-      font-size: 1.15rem;
-      margin-bottom: 8px;
-    }
-
-    .section-block p {
+    .product-description {
+      line-height: 1.6;
       color: #444;
-      text-align: justify;
+      margin-bottom: 20px;
     }
 
-    .feature-group {
-      margin-bottom: 12px;
+    .btn-action {
+      background-color: #25d366;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
     }
 
-    .feature-title {
-      font-weight: 600;
-      color: #222;
-      margin-bottom: 4px;
+    /* SECCIÓN TÉCNICA */
+    .technical-section {
+      border-top: 1px solid #e0e0e0;
+      padding-top: 30px;
+      margin-top: 30px;
     }
 
-    .feature-list {
+    .technical-section h2 {
+      color: var(--primary-color);
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+    }
+
+    .technical-section h3 {
+      color: var(--primary-color);
+      font-size: 1.1rem;
+      margin: 20px 0 10px 0;
+    }
+
+    .technical-section p, .technical-section ul {
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    .technical-section ul {
       list-style-type: disc;
       padding-left: 20px;
-      color: #555;
     }
-
-    .feature-list li {
-      margin-bottom: 6px;
-    }
-
-    .btn-back {
-      display: inline-block;
-      background-color: var(--primary-color);
-      color: #fff;
-      padding: 12px 24px;
-      border-radius: 4px;
-      font-weight: 600;
-      margin-top: 15px;
-      transition: background 0.3s;
-    }
-    .btn-back:hover { background-color: #145556; }
 
     /* FOOTER */
     footer {
       background-color: #1a1a1a;
       color: #aaa;
-      text-align: center;
-      padding: 20px;
-      margin-top: 60px;
+      padding: 30px 5%;
       font-size: 0.9rem;
+      margin-top: auto;
     }
 
-    @media (max-width: 768px) {
-      .product-detail-container { grid-template-columns: 1fr; }
-      .product-image-box { position: static; }
+    .copyright {
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
+  <!-- BARRA SUPERIOR -->
+  <div class="top-bar">
+    Productos 100% Naturales para tu salud | Envíos garantizados
+  </div>
+
   <!-- NAVEGACIÓN -->
   <nav class="navbar">
     <a href="index.html">
-      <img src="pronaper logo.png" alt="Pronaper Logo" class="logo-img">
+      <img src="pronaper-logo.png" alt="Pronaper Logo" class="logo-img">
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="catalogo.html">Catálogo</a></li>
       <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
     </ul>
+    <div class="nav-icons">
+      <span>🔍</span>
+      <span>👤</span>
+      <span>🛒</span>
+    </div>
   </nav>
 
-  <!-- FICHA TÉCNICA Y DETALLES -->
+  <!-- CONTENIDO DEL PRODUCTO -->
   <main class="product-detail-container">
-    
-    <!-- COLUMNA IMAGEN -->
-    <div class="product-image-box">
-      <img src="ajo negro.png" alt="Extracto Fluido de Ajo Negro">
-      <a href="index.html" class="btn-back">← Volver al inicio</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> / <a href="catalogo.html">Catálogo</a> / Extracto Fluido de Ajo Negro
     </div>
 
-    <!-- COLUMNA INFORMACIÓN -->
-    <div class="product-info">
-      <h1>🧄 Extracto Fluido de Ajo Negro</h1>
-      <div class="subtitle">Ficha Técnica y Detalles de Salud</div>
-
-      <!-- SECCIÓN 1 -->
-      <div class="section-block">
-        <h3>1. Descripción y Principio Activo</h3>
-        <p>
-          El Extracto Fluido de Ajo Negro es un fitoterapéutico derivado del procesamiento y maduración de la <em>Allium sativum</em>. Su principal valor biológico radica en la alta concentración de S-alil-cisteína (SAC), un compuesto organosulfurado hidrosoluble de rápida absorción y biodisponibilidad que otorga una capacidad antioxidante significativamente superior a la del ajo fresco. Además, carece de alicina libre, lo que evita la irritación de la mucosa gástrica y la halitosis (mal aliento).
+    <div class="product-main-grid">
+      <div class="product-image-container">
+        <img src="ajo-negro.png" alt="Extracto Fluido de Ajo Negro">
+      </div>
+      <div class="product-summary">
+        <h1>Extracto Fluido de Ajo Negro</h1>
+        <div class="product-subtitle">Regulador de la presión arterial y el colesterol</div>
+        <p class="product-description">
+          Potencia tus defensas naturales y revitaliza tu energía diaria sin irritación gástrica ni mal aliento[cite: 2].
         </p>
+        <a href="https://wa.me/584144149073?text=Hola,%20deseo%20más%20información%20sobre%20el%20Extracto%20de%20Ajo%20Negro" target="_blank" class="btn-action">
+          📲 Consultar / Comprar por WhatsApp
+        </a>
       </div>
-
-      <!-- SECCIÓN 2 -->
-      <div class="section-block">
-        <h3>2. Propiedades Fisiológicas y Mecanismos de Acción</h3>
-        
-        <div class="feature-group">
-          <div class="feature-title">Soporte Cardiovascular y Hemodinámico:</div>
-          <ul class="feature-list">
-            <li><strong>Regulación Arterial:</strong> Contribuye a la modulación de la presión arterial mediante la estimulación de la síntesis de óxido nítrico, favoreciendo la vasodilatación periférica.</li>
-            <li><strong>Perfil Lipídico:</strong> Coadyuva en la inhibición de la enzima HMG-CoA reductasa, auxiliando en la reducción de los niveles de colesterol LDL y triglicéridos en sangre.</li>
-          </ul>
-        </div>
-
-        <div class="feature-group">
-          <div class="feature-title">Modulación del Sistema Inmune:</div>
-          <ul class="feature-list">
-            <li>Estimula la actividad de los linfocitos y células Natural Killer (NK), fortaleciendo la respuesta inmunológica celular frente a agentes patógenos como virus, bacterias y procesos infecciosos.</li>
-          </ul>
-        </div>
-
-        <div class="feature-group">
-          <div class="feature-title">Capacidad Antioxidante y Citoprotección:</div>
-          <ul class="feature-list">
-            <li>Neutraliza especies reactivas de oxígeno (radicales libres). Reduce el estrés oxidativo a nivel celular, protegiendo las membranas estructurales y previniendo el envejecimiento tisular prematuro.</li>
-          </ul>
-        </div>
-
-        <div class="feature-group">
-          <div class="feature-title">Recuperación Metabólica y Energética:</div>
-          <ul class="feature-list">
-            <li>Promueve el metabolismo eficiente del glucógeno y la función mitocondrial, ayudando a disminuir los marcadores de fatiga física y astenia mental.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- SECCIÓN 3 -->
-      <div class="section-block">
-        <h3>3. Ventajas Terapéuticas</h3>
-        <ul class="feature-list">
-          <li>Alta tolerancia digestiva (apto para personas con sensibilidad gástrica o gastritis).</li>
-          <li>Biodisponibilidad optimizada de sus fitonutrientes hidrosolubilizados.</li>
-          <li>Ausencia de efectos organolépticos residuales (sin mal aliento ni reflujo).</li>
-        </ul>
-      </div>
-
     </div>
+
+    <!-- FICHA TÉCNICA Y DETALLADA -->
+    <section class="technical-section">
+      <h2>📋 Ficha Técnica y Propiedades</h2>
+      
+      <p>A través de una maduración controlada sin aditivos químicos, el ajo fresco multiplica sus propiedades antioxidantes y elimina el fuerte olor característico, facilitando una digestión óptima.</p>
+
+      <h3>Beneficios Principales</h3>
+      <ul>
+        <li><strong>Cardioprotección:</strong> Ayuda a regular la presión arterial y el colesterol[cite: 2].</li>
+        <li><strong>Alta Biodisponibilidad:</strong> Concentra compuestos hidrosolubles de rápida absorción en el organismo.</li>
+        <li><strong>Sistema Inmune:</strong> Refuerza las defensas naturales y ayuda a la regeneración celular.</li>
+      </ul>
+    </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    © 2026 Pronaper. Todos los derechos reservados.
+    <div class="copyright">
+      © 2026 Pronaper. Todos los derechos reservados.
+    </div>
   </footer>
 
 </body>
