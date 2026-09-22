@@ -5,83 +5,261 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Extracto de Neem | Pronaper</title>
   <style>
-    :root { --primary-color: #0b3c3d; --secondary-color: #f4f6f5; --text-color: #333333; --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: var(--font-family); color: var(--text-color); background-color: #ffffff; line-height: 1.6; }
-    a { text-decoration: none; color: inherit; }
-    .navbar { display: flex; justify-content: space-between; align-items: center; padding: 10px 5%; border-bottom: 1px solid #e0e0e0; background: #fff; position: sticky; top: 0; z-index: 100; }
-    .logo-img { height: 60px; object-fit: contain; }
-    .nav-links { display: flex; gap: 24px; list-style: none; }
-    .nav-links a { font-weight: 500; font-size: 0.95rem; }
-    .product-detail-container { max-width: 1100px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; align-items: start; }
-    .product-image-box { background: #fafafa; border: 1px solid #eee; border-radius: 8px; padding: 24px; text-align: center; position: sticky; top: 90px; }
-    .product-image-box img { max-width: 100%; height: auto; border-radius: 6px; }
-    .product-info h1 { font-size: 2.2rem; color: var(--primary-color); margin-bottom: 10px; }
-    .subtitle { font-size: 1.2rem; font-weight: 600; color: #666; margin-bottom: 24px; border-bottom: 2px solid var(--secondary-color); padding-bottom: 8px; }
-    .section-block { margin-bottom: 24px; }
-    .section-block h3 { color: var(--primary-color); font-size: 1.15rem; margin-bottom: 8px; }
-    .section-block p { color: #444; text-align: justify; }
-    .feature-group { margin-bottom: 12px; }
-    .feature-title { font-weight: 600; color: #222; margin-bottom: 4px; }
-    .feature-list { list-style-type: disc; padding-left: 20px; color: #555; }
-    .feature-list li { margin-bottom: 6px; }
-    .btn-back { display: inline-block; background-color: var(--primary-color); color: #fff; padding: 12px 24px; border-radius: 4px; font-weight: 600; margin-top: 15px; transition: background 0.3s; }
-    .btn-back:hover { background-color: #145556; }
-    footer { background-color: #1a1a1a; color: #aaa; text-align: center; padding: 20px; margin-top: 60px; font-size: 0.9rem; }
-    @media (max-width: 768px) { .product-detail-container { grid-template-columns: 1fr; } .product-image-box { position: static; } }
+    :root {
+      --primary-color: #0b3c3d;
+      --secondary-color: #f4f6f5;
+      --accent-color: #e2a03f;
+      --text-color: #333333;
+      --light-text: #ffffff;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      color: var(--text-color);
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* BARRA SUPERIOR */
+    .top-bar {
+      background-color: var(--primary-color);
+      color: var(--light-text);
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+    }
+
+    /* NAVEGACIÓN PRINCIPAL */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 5%;
+      border-bottom: 1px solid #e0e0e0;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 100;
+    }
+
+    .logo-img {
+      height: 75px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 16px;
+      font-size: 1.1rem;
+    }
+
+    /* DETALLE DEL PRODUCTO */
+    .product-detail-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      flex: 1;
+    }
+
+    .breadcrumb {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .breadcrumb a {
+      color: var(--primary-color);
+    }
+
+    .product-main-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .product-image-container {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .product-image-container img {
+      max-width: 100%;
+      height: auto;
+      max-height: 350px;
+      object-fit: contain;
+    }
+
+    .product-summary h1 {
+      color: var(--primary-color);
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .product-subtitle {
+      font-weight: 600;
+      color: var(--accent-color);
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .product-description {
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    .btn-action {
+      background-color: #25d366;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    /* SECCIÓN TÉCNICA DETALLADA */
+    .technical-section {
+      border-top: 1px solid #e0e0e0;
+      padding-top: 30px;
+      margin-top: 30px;
+    }
+
+    .technical-section h2 {
+      color: var(--primary-color);
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+    }
+
+    .technical-section h3 {
+      color: var(--primary-color);
+      font-size: 1.1rem;
+      margin: 20px 0 10px 0;
+    }
+
+    .technical-section p, .technical-section ul {
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    .technical-section ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #1a1a1a;
+      color: #aaa;
+      padding: 30px 5%;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    .copyright {
+      text-align: center;
+    }
   </style>
 </head>
 <body>
+
+  <!-- BARRA SUPERIOR -->
+  <div class="top-bar">
+    Productos 100% Naturales para tu salud | Envíos garantizados
+  </div>
+
+  <!-- NAVEGACIÓN -->
   <nav class="navbar">
-    <a href="index.html"><img src="pronaper logo.png" alt="Pronaper Logo" class="logo-img"></a>
+    <a href="index.html">
+      <img src="pronaper-logo.png" alt="Pronaper Logo" class="logo-img">
+    </a>
     <ul class="nav-links">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="catalogo.html">Catálogo</a></li>
       <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
     </ul>
+    <div class="nav-icons">
+      <span>🔍</span>
+      <span>👤</span>
+      <span>🛒</span>
+    </div>
   </nav>
 
+  <!-- CONTENIDO DEL PRODUCTO -->
   <main class="product-detail-container">
-    <div class="product-image-box">
-      <img src="neem.png" alt="Extracto de Neem">
-      <a href="index.html" class="btn-back">← Volver al inicio</a>
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> / <a href="catalogo.html">Catálogo</a> / Extracto de Neem
     </div>
 
-    <div class="product-info">
-      <h1>🌳 Extracto de Neem (Azadirachta indica)</h1>
-      <div class="subtitle">Ficha Técnica y Detalles de Salud</div>
-
-      <div class="section-block">
-        <h3>1. Descripción y Principios Activos</h3>
-        <p>Preparación fitoterapéutica caracterizada por la presencia de triterpenoides y limonoides altamente bioactivos, destacando la Azadiractina, la Ninbina y la Ninbidina.</p>
+    <div class="product-main-grid">
+      <div class="product-image-container">
+        <img src="neem.png" alt="Extracto de Neem">
       </div>
-
-      <div class="section-block">
-        <h3>2. Propiedades Fisiológicas y Mecanismos de Acción</h3>
-        <div class="feature-group">
-          <div class="feature-title">Acción Antiparasitaria y Purificante Interna:</div>
-          <ul class="feature-list">
-            <li><strong>Efecto Anthelmíntico:</strong> Modula la fisiología de parásitos intestinales interfiriendo en sus ciclos de reproducción y nutrición sin alterar drásticamente la flora saprófita.</li>
-          </ul>
-        </div>
-
-        <div class="feature-group">
-          <div class="feature-title">Modulación de la Glucemia Plasmática:</div>
-          <ul class="feature-list">
-            <li><strong>Inhibición Enzimática:</strong> Coadyuva en la ralentización de la absorción de glucosa en el intestino y mejora la sensibilidad tisular a la insulina, apoyando el control metabólico del azúcar en sangre.</li>
-          </ul>
-        </div>
-
-        <div class="feature-group">
-          <div class="feature-title">Citoprotección Dermatológica:</div>
-          <ul class="feature-list">
-            <li>Inhibe la proliferación bacteriana en afecciones inflamatorias de la piel (acné, brotes), promoviendo la cicatrización limpia.</li>
-          </ul>
-        </div>
+      <div class="product-summary">
+        <h1>Extracto de Neem</h1>
+        <div class="product-subtitle">Purificante Sanguíneo, Antiparasitario y Cuidado de la Piel</div>
+        <p class="product-description">
+          Un potente extracto botánico conocido en la medicina tradicional como la "farmacia del pueblo". Destaca por sus excepcionales propiedades antibacterianas, antiparasitarias y depurativas, promoviendo la salud cutánea e inmunológica.
+        </p>
+        <a href="https://wa.me/584144149073?text=Hola,%20deseo%20más%20información%20sobre%20el%20Extracto%20de%20Neem" target="_blank" class="btn-action">
+          📲 Consultar / Comprar por WhatsApp
+        </a>
       </div>
     </div>
+
+    <!-- FICHA TÉCNICA -->
+    <section class="technical-section">
+      <h2>📋 Ficha Técnica y Propiedades</h2>
+      
+      <p>El Extracto de Neem Pronaper es procesado para concentrar sus principios activos flavonoides y limonoides, ofreciendo un escudo protector natural contra microorganismos indeseados.</p>
+
+      <h3>Beneficios Principales</h3>
+      <ul>
+        <li><strong>Propiedades Purificantes y Desintoxicantes:</strong> Ayuda a depurar la sangre y apoya los procesos naturales de desintoxicación del organismo.</li>
+        <li><strong>Cuidado e Higiene Cutánea:</strong> Muy efectivo para apoyar el tratamiento de afecciones de la piel como acné, hongos y picazones gracias a su acción antimicrobiana.</li>
+        <li><strong>Acción Antiparasitaria e Inmunológica:</strong> Contribuye a fortalecer las defensas del cuerpo y combate parásitos del sistema digestivo.</li>
+      </ul>
+    </section>
   </main>
 
-  <footer>© 2026 Pronaper. Todos los derechos reservados.</footer>
+  <!-- FOOTER -->
+  <footer>
+    <div class="copyright">
+      © 2026 Pronaper. Todos los derechos reservados.
+    </div>
+  </footer>
+
 </body>
 </html>
