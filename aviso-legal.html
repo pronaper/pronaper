@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aviso Legal | Pronaper</title>
+  <style>
+    :root {
+      --primary-color: #0b3c3d;
+      --secondary-color: #f4f6f5;
+      --accent-color: #e2a03f;
+      --text-color: #333333;
+      --light-text: #ffffff;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      color: var(--text-color);
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* BARRA SUPERIOR */
+    .top-bar {
+      background-color: var(--primary-color);
+      color: var(--light-text);
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+    }
+
+    /* NAVEGACIÓN PRINCIPAL */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 5%;
+      border-bottom: 1px solid #e0e0e0;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 100;
+    }
+
+    .logo-img {
+      height: 75px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-color);
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 16px;
+      font-size: 1.1rem;
+    }
+
+    /* HEADER DE LA SUBPÁGINA */
+    .page-header {
+      background-color: var(--secondary-color);
+      padding: 40px 5%;
+      text-align: center;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .page-header h1 {
+      color: var(--primary-color);
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+
+    .page-header p {
+      color: #666;
+      font-size: 1rem;
+    }
+
+    /* CONTENIDO PRINCIPAL */
+    .legal-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 5%;
+      flex: 1;
+    }
+
+    .legal-section {
+      margin-bottom: 32px;
+      background: #fff;
+      padding: 24px;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+
+    .legal-section h2 {
+      color: var(--primary-color);
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .legal-section p {
+      line-height: 1.7;
+      color: #444;
+      font-size: 0.98rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #1a1a1a;
+      color: #aaa;
+      padding: 40px 5% 20px;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    .footer-columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR -->
+  <div class="top-bar">
+    Productos 100% Naturales para tu salud | Envíos garantizados
+  </div>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="navbar">
+    <a href="index.html">
+      <img src="pronaper-logo.png" alt="Pronaper Logo" class="logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-icons">
+      <span>🔍</span>
+      <span>👤</span>
+      <span>🛒</span>
+    </div>
+  </nav>
+
+  <!-- CABECERA DE PÁGINA -->
+  <header class="page-header">
+    <h1>📄 Aviso Legal</h1>
+    <p>Términos y condiciones de uso del portal web de Pronaper</p>
+  </header>
+
+  <!-- CONTENIDO AVISO LEGAL -->
+  <main class="legal-container">
+
+    <article class="legal-section">
+      <h2>1. Datos Identificativos</h2>
+      <p>El presente portal web es propiedad de la firma mercantil <strong>Productos Naturales Pérez, F.P. (Pronaper)</strong>, con atención y operaciones en Venezuela.</p>
+    </article>
+
+    <article class="legal-section">
+      <h2>2. Propiedad Intelectual e Industrial</h2>
+      <p>Todos los contenidos presentados en este sitio web —incluyendo marcas, logotipos, textos de fichas técnicas, imágenes y diseño gráfico— son propiedad exclusiva de Pronaper o de sus respectivos titulares con autorización. Queda prohibida su reproducción total o parcial sin autorización previa.</p>
+    </article>
+
+    <article class="legal-section">
+      <h2>3. Exención de Responsabilidad Médica</h2>
+      <p>La información de carácter fitoterapéutico y nutricional provista en este sitio web tiene un propósito meramente informativo y educativo. Los productos comerciales presentados son suplementos, extractos y aceites naturales, por lo que no reemplazan el diagnóstico, tratamiento o prescripción médica profesional. Se recomienda consultar a un especialista de la salud antes de iniciar cualquier consumo fitoterapéutico en presencia de condiciones médicas preexistentes.</p>
+    </article>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer id="contacto">
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4>Atención al Cliente</h4>
+        <ul>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="#">Envíos</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Pronaper</h4>
+        <ul>
+          <li><a href="nosotros.html">Sobre nosotros</a></li>
+          <li><a href="#">Blog de salud</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="aviso-legal.html">Aviso legal</a></li>
+          <li><a href="#">Políticas de privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 Pronaper. Todos los derechos reservados.
+    </div>
+  </footer>
+
+</body>
+</html>
