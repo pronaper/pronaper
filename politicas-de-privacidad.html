@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Políticas de Privacidad | Pronaper</title>
+  <style>
+    :root {
+      --primary-color: #0b3c3d;
+      --secondary-color: #f4f6f5;
+      --accent-color: #e2a03f;
+      --text-color: #333333;
+      --light-text: #ffffff;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      color: var(--text-color);
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* BARRA SUPERIOR */
+    .top-bar {
+      background-color: var(--primary-color);
+      color: var(--light-text);
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+    }
+
+    /* NAVEGACIÓN PRINCIPAL */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 5%;
+      border-bottom: 1px solid #e0e0e0;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 100;
+    }
+
+    .logo-img {
+      height: 75px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-color);
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 16px;
+      font-size: 1.1rem;
+    }
+
+    /* HEADER DE LA SUBPÁGINA */
+    .page-header {
+      background-color: var(--secondary-color);
+      padding: 40px 5%;
+      text-align: center;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .page-header h1 {
+      color: var(--primary-color);
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+
+    .page-header p {
+      color: #666;
+      font-size: 1rem;
+    }
+
+    /* CONTENIDO PRINCIPAL */
+    .legal-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 5%;
+      flex: 1;
+    }
+
+    .intro-card {
+      background-color: var(--secondary-color);
+      padding: 20px;
+      border-left: 4px solid var(--primary-color);
+      border-radius: 4px;
+      margin-bottom: 24px;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .legal-section {
+      margin-bottom: 32px;
+      background: #fff;
+      padding: 24px;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+
+    .legal-section h2 {
+      color: var(--primary-color);
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+
+    .legal-section p {
+      line-height: 1.7;
+      color: #444;
+      font-size: 0.98rem;
+    }
+
+    .legal-section ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-top: 10px;
+      color: #444;
+    }
+
+    .legal-section ul li {
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #1a1a1a;
+      color: #aaa;
+      padding: 40px 5% 20px;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    .footer-columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR -->
+  <div class="top-bar">
+    Productos 100% Naturales para tu salud | Envíos garantizados
+  </div>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="navbar">
+    <a href="index.html">
+      <img src="pronaper-logo.png" alt="Pronaper Logo" class="logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-icons">
+      <span>🔍</span>
+      <span>👤</span>
+      <span>🛒</span>
+    </div>
+  </nav>
+
+  <!-- CABECERA DE PÁGINA -->
+  <header class="page-header">
+    <h1>🔒 Políticas de Privacidad</h1>
+    <p>Tratamiento y protección de datos personales de nuestros usuarios</p>
+  </header>
+
+  <!-- CONTENIDO POLÍTICAS DE PRIVACIDAD -->
+  <main class="legal-container">
+
+    <div class="intro-card">
+      En <strong>Pronaper (Productos Naturales Pérez, F.P.)</strong>, nos tomamos muy en serio la privacidad y protección de los datos de nuestros usuarios y clientes.
+    </div>
+
+    <article class="legal-section">
+      <h2>1. Recopilación de Datos</h2>
+      <p>Recopilamos únicamente la información personal que el usuario facilita voluntariamente a través de nuestros formularios de contacto o canales de mensajería directos (como WhatsApp y correo electrónico), tales como: nombre, número de teléfono y dirección de correo.</p>
+    </article>
+
+    <article class="legal-section">
+      <h2>2. Uso de la Información</h2>
+      <p>La información proporcionada se utiliza exclusivamente para:</p>
+      <ul>
+        <li>Atender solicitudes de información, dudas o asesorías sobre nuestros productos.</li>
+        <li>Gestionar pedidos, envíos y facturación al detal o al mayor.</li>
+        <li>Mejorar la atención al cliente y la experiencia en la página web.</li>
+      </ul>
+    </article>
+
+    <article class="legal-section">
+      <h2>3. Protecciones de Datos y Terceros</h2>
+      <p>Pronaper se compromete a no vender, alquilar, ceder ni compartir sus datos personales con terceras empresas o anunciantes sin su consentimiento expreso.</p>
+    </article>
+
+    <article class="legal-section">
+      <h2>4. Derechos del Usuario</h2>
+      <p>En cualquier momento, el usuario puede solicitar la actualización o eliminación de sus datos personales de nuestras bases de datos de contacto escribiéndonos directamente a nuestros canales oficiales de atención.</p>
+    </article>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer id="contacto">
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h4>Atención al Cliente</h4>
+        <ul>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="#">Envíos</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Pronaper</h4>
+        <ul>
+          <li><a href="nosotros.html">Sobre nosotros</a></li>
+          <li><a href="#">Blog de salud</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="aviso-legal.html">Aviso legal</a></li>
+          <li><a href="politicas-de-privacidad.html">Políticas de privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 Pronaper. Todos los derechos reservados.
+    </div>
+  </footer>
+
+</body>
+</html>
