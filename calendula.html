@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aceite Medicinal de Caléndula (Prensado en Frío) | Pronaper</title>
+  <style>
+    :root {
+      --primary-color: #0b3c3d;
+      --secondary-color: #f4f6f5;
+      --accent-color: #e2a03f;
+      --text-color: #333333;
+      --light-text: #ffffff;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      color: var(--text-color);
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* BARRA SUPERIOR */
+    .top-bar {
+      background-color: var(--primary-color);
+      color: var(--light-text);
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+    }
+
+    /* NAVEGACIÓN PRINCIPAL */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 5%;
+      border-bottom: 1px solid #e0e0e0;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 100;
+    }
+
+    .logo-img {
+      height: 75px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 16px;
+      font-size: 1.1rem;
+    }
+
+    /* DETALLE DEL PRODUCTO */
+    .product-detail-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      flex: 1;
+    }
+
+    .breadcrumb {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .breadcrumb a {
+      color: var(--primary-color);
+    }
+
+    .product-main-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .product-image-container {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .product-image-container img {
+      max-width: 100%;
+      height: auto;
+      max-height: 350px;
+      object-fit: contain;
+    }
+
+    .product-summary h1 {
+      color: var(--primary-color);
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .product-subtitle {
+      font-weight: 600;
+      color: var(--accent-color);
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .product-description {
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    .btn-action {
+      background-color: #25d366;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    /* SECCIÓN TÉCNICA DETALLADA */
+    .technical-section {
+      border-top: 1px solid #e0e0e0;
+      padding-top: 30px;
+      margin-top: 30px;
+    }
+
+    .technical-section h2 {
+      color: var(--primary-color);
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+    }
+
+    .technical-section h3 {
+      color: var(--primary-color);
+      font-size: 1.1rem;
+      margin: 20px 0 10px 0;
+    }
+
+    .technical-section p, .technical-section ul {
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    .technical-section ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #1a1a1a;
+      color: #aaa;
+      padding: 30px 5%;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    .copyright {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR -->
+  <div class="top-bar">
+    Productos 100% Naturales para tu salud | Envíos garantizados
+  </div>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="navbar">
+    <a href="index.html">
+      <img src="pronaper-logo.png" alt="Pronaper Logo" class="logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-icons">
+      <span>🔍</span>
+      <span>👤</span>
+      <span>🛒</span>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO DEL PRODUCTO -->
+  <main class="product-detail-container">
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> / <a href="catalogo.html">Catálogo</a> / Aceite Medicinal de Caléndula
+    </div>
+
+    <div class="product-main-grid">
+      <div class="product-image-container">
+        <img src="calendula.png" alt="Aceite Medicinal de Caléndula">
+      </div>
+      <div class="product-summary">
+        <h1>Aceite Medicinal de Caléndula (Prensado en Frío)</h1>
+        <div class="product-subtitle">Regenerador Cutáneo, Cicatrizante Avanzado y Calnante Dérmico</div>
+        <p class="product-description">
+          Aceite terapéutico extraído de las flores de <em>Calendula officinalis</em> mediante prensado en frío, conservando intacta su rica matriz bioactiva. Contiene una potente combinación de carotenoides, flavonoides, ácido salicílico, saponinas triterpénicas, resinas y calendina.
+        </p>
+        <a href="https://wa.me/584144149073?text=Hola,%20deseo%20más%20información%20sobre%20el%20Aceite%20Medicinal%20de%20Caléndula" target="_blank" class="btn-action">
+          📲 Consultar / Comprar por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- FICHA TÉCNICA -->
+    <section class="technical-section">
+      <h2>📋 Ficha Técnica y Propiedades</h2>
+      
+      <p>El Aceite Medicinal de Caléndula Pronaper es una solución natural versátil formulada para acelerar la reparación de la piel, aliviar molestias en pieles reactivas y ofrecer una protección antiséptica de la barrera cutánea.</p>
+
+      <h3>Propiedades Fisiológicas y Mecanismos de Acción</h3>
+      <ul>
+        <li><strong>Acción Regeneradora Cutánea y Cicatrizante (Vulnerario):</strong> Estimula la proliferación de epitelios y fibroblastos, acelerando el proceso natural de reepitelización. Favorece la recuperación celular limpia en grietas, heridas, quemaduras, rozaduras de pañal y zonas agredidas por fricción.</li>
+        <li><strong>Modulación Antiinflamatoria y Calmante:</strong> Disminuye la síntesis de prostaglandinas reconfortando pieles reactivas con eccemas o dermatitis. Calma, hidrata y desinflama la piel delicada de la zona vulvar y mucosas externas tras infecciones fúngicas o cambios hormonales.</li>
+        <li><strong>Protección Antiséptica y Bactericida:</strong> Crea una barrera defensiva cutánea que inhibe el crecimiento de bacterias grampositivas y hongos, reduciendo el riesgo de superinfección.</li>
+        <li><strong>Soporte Emoliente y Función Barrera:</strong> Restaura los lípidos intercelulares del estrato córneo, aportando elasticidad y previniendo la pérdida de agua transepidérmica.</li>
+      </ul>
+
+      <h3>Indicaciones y Afecciones que Ayuda a Tratar</h3>
+      <ul>
+        <li><strong>Cuidado Dermatológico e Irritaciones:</strong> Dermatitis de pañal en bebés, eccemas, psoriasis, brotes de acné, quemaduras solares, térmicas, rozaduras, grietas en pezones (lactancia), manos, talones, hematomas y cicatrices recientes.</li>
+        <li><strong>Salud Íntima Femenina:</strong> Irritación vulvar, resequedad íntima y molestias derivadas de micosis o candidiasis.</li>
+        <li><strong>Erupciones e Infecciones Cutáneas:</strong> Alivio de lesiones y picazón generadas por erupciones virales como lechina (varicela), herpes o sarampión.</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="copyright">
+      © 2026 Pronaper. Todos los derechos reservados.
+    </div>
+  </footer>
+
+</body>
+</html>
