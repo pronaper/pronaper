@@ -117,20 +117,45 @@
       background-color: #145556;
     }
 
-    .hero-image {
+    .hero-image-container {
       width: 45%;
-      height: 320px;
-      border-radius: 8px;
-      overflow: hidden;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
+      gap: 12px;
     }
 
-    .hero-image img {
+    .hero-image-link {
       width: 100%;
-      height: 100%;
+      display: block;
+    }
+
+    .hero-image-container img {
+      width: 100%;
+      height: auto;
+      max-height: 320px;
+      border-radius: 8px;
       object-fit: contain;
+      display: block;
+      transition: transform 0.2s;
+    }
+
+    .hero-image-container img:hover {
+      transform: scale(1.02);
+    }
+
+    .btn-hero-subpage {
+      background-color: var(--accent-color);
+      color: var(--light-text);
+      padding: 8px 20px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+
+    .btn-hero-subpage:hover {
+      background-color: #c98a32;
     }
 
     /* BANDERAS DE BENEFICIOS */
@@ -258,8 +283,11 @@
       <p>Especialistas en la fabricación de extractos naturales y botánicos concentrados para cuidar de ti.</p>
       <a href="catalogo.html" class="btn-primary">Ver catálogo</a>
     </div>
-    <div class="hero-image">
-      <img src="ajo-negro2.png" alt="Productos Pronaper">
+    <div class="hero-image-container">
+      <a href="los-tres-ases.html" class="hero-image-link">
+        <img src="lostresases.jpg" alt="Los Tres Ases Pronaper">
+      </a>
+      <a href="los-tres-ases.html" class="btn-hero-subpage">aquí</a>
     </div>
   </header>
 
