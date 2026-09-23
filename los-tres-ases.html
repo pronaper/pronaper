@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Los Tres Ases | Pronaper</title>
+  <style>
+    :root {
+      --primary-color: #0b3c3d;
+      --secondary-color: #f4f6f5;
+      --accent-color: #e2a03f;
+      --text-color: #333333;
+      --light-text: #ffffff;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      color: var(--text-color);
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* BARRA SUPERIOR */
+    .top-bar {
+      background-color: var(--primary-color);
+      color: var(--light-text);
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+    }
+
+    /* NAVEGACIÓN PRINCIPAL */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 5%;
+      border-bottom: 1px solid #e0e0e0;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 100;
+    }
+
+    .logo-img {
+      height: 75px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 16px;
+      font-size: 1.1rem;
+    }
+
+    /* CONTENEDOR PRINCIPAL */
+    .article-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      flex: 1;
+    }
+
+    .breadcrumb {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .breadcrumb a {
+      color: var(--primary-color);
+    }
+
+    .article-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .article-header h1 {
+      color: var(--primary-color);
+      font-size: 2.3rem;
+      margin-bottom: 15px;
+    }
+
+    .article-subtitle {
+      font-size: 1.2rem;
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+
+    .intro-text {
+      font-size: 1.05rem;
+      color: #444;
+      margin-bottom: 40px;
+      text-align: justify;
+    }
+
+    /* SECCIÓN DE LOS TRES ASES */
+    .card-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 30px;
+      gap: 20px;
+    }
+
+    @media (min-width: 600px) {
+      .card-item {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+
+    .product-image {
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      border-radius: 8px;
+      object-fit: contain;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .product-image:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .card-content {
+      flex: 1;
+    }
+
+    .card-content h2 {
+      color: var(--primary-color);
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .card-content p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .closing-text {
+      font-size: 1.05rem;
+      color: #333;
+      background-color: var(--secondary-color);
+      padding: 20px;
+      border-left: 4px solid var(--primary-color);
+      border-radius: 4px;
+      margin-top: 40px;
+    }
+
+    /* LIGHTBOX / ZOOM DE IMAGEN */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox-content {
+      max-width: 90%;
+      max-height: 90vh;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #1a1a1a;
+      color: #aaa;
+      padding: 30px 5%;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    .copyright {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR -->
+  <div class="top-bar">
+    Productos 100% Naturales para tu salud | Envíos garantizados
+  </div>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="navbar">
+    <a href="index.html">
+      <img src="pronaper-logo.png" alt="Pronaper Logo" class="logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-icons">
+      <span>🔍</span>
+      <span>👤</span>
+      <span>🛒</span>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO -->
+  <main class="article-container">
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> / Los Tres Ases
+    </div>
+
+    <header class="article-header">
+      <h1>El secreto guardado de la botánica moderna</h1>
+      <div class="article-subtitle">La tríada del bienestar integral</div>
+    </header>
+
+    <div class="intro-text">
+      <p>Con el paso del tiempo, el cuerpo empieza a dar pequeñas señales: una digestión más lenta, pesadez al final del día, o esa fatiga constante que un café ya no logra quitar. A menudo buscamos soluciones complejas cuando la respuesta de la naturaleza siempre ha estado en la concentración justa de lo esencial.</p>
+      <br>
+      <p>Dentro de la fitoterapia avanzada, existe una combinación clave conocida como los tres ases del cuidado natural, capaz de transformar la vitalidad desde adentro:</p>
+    </div>
+
+    <!-- AS 1: AJO NEGRO -->
+    <div class="card-item">
+      <img src="cartaajonegro.jpg" alt="Carta Ajo Negro" class="product-image" onclick="openLightbox(this)">
+      <div class="card-content">
+        <h2>Ajo Negro — Tu aliado cardiovascular cotidiano 🧄</h2>
+        <p>A diferencia del ajo tradicional, su proceso de fermentación natural multiplica sus compuestos activos sin dejar mal aliento ni causar pesadez digestiva. Es el hábito ideal para quienes buscan mantener una presión arterial equilibrada, proteger el corazón y mantener la energía diaria en su punto óptimo de forma constante.</p>
+      </div>
+    </div>
+
+    <!-- AS 2: LIMÓN NEGRO -->
+    <div class="card-item">
+      <img src="cartalimonnegro.jpg" alt="Carta Limón Negro" class="product-image" onclick="openLightbox(this)">
+      <div class="card-content">
+        <h2>Limón Negro — El reinicio metabólico que el cuerpo pide 🍋</h2>
+        <p>Al concentrar más de 4 veces la vitamina C del limón común, este extracto se convierte en una herramienta de alcalinización y limpieza profunda. Es perfecto para liberar al organismo de la hinchazón, favorecer la desintoxicación hepática y devolverle al cuerpo esa sensación de ligereza y pureza física.</p>
+      </div>
+    </div>
+
+    <!-- AS 3: CEBOLLA NEGRA -->
+    <div class="card-item">
+      <img src="cartacebollanegra.jpg" alt="Carta Cebolla Negra" class="product-image" onclick="openLightbox(this)">
+      <div class="card-content">
+        <h2>Cebolla Negra — Elasticidad y fluidez para tus arterias 🧅</h2>
+        <p>Considerada la gran especialista en salud vascular, duplica la capacidad antioxidante de la cebolla convencional. Su secreto está en cómo estimula el óxido nítrico para promover arterias más flexibles, una circulación fluida y una protección continua contra el desgaste celular.</p>
+      </div>
+    </div>
+
+    <div class="closing-text">
+      Priorizar tu salud no tiene por qué ser complicado ni invasivo. Incorporar el poder concentrado de estos tres ingredientes botánicos es el paso más simple para devolverle al cuerpo su equilibrio natural y vitalidad duradera.
+    </div>
+  </main>
+
+  <!-- LIGHTBOX PARA VER LAS CARTAS EN GRANDE -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" class="lightbox-content">
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="copyright">
+      © 2026 Pronaper. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <script>
+    function openLightbox(element) {
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = document.getElementById('lightbox-img');
+      lightbox.style.display = 'flex';
+      lightboxImg.src = element.src;
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
