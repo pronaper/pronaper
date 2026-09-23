@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extracto de Cebolla Negra | Pronaper</title>
+  <style>
+    :root {
+      --primary-color: #0b3c3d;
+      --secondary-color: #f4f6f5;
+      --accent-color: #e2a03f;
+      --text-color: #333333;
+      --light-text: #ffffff;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-family);
+      color: var(--text-color);
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* BARRA SUPERIOR */
+    .top-bar {
+      background-color: var(--primary-color);
+      color: var(--light-text);
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+    }
+
+    /* NAVEGACIÓN PRINCIPAL */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 5%;
+      border-bottom: 1px solid #e0e0e0;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 100;
+    }
+
+    .logo-img {
+      height: 75px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 16px;
+      font-size: 1.1rem;
+    }
+
+    /* DETALLE DEL PRODUCTO */
+    .product-detail-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      flex: 1;
+    }
+
+    .breadcrumb {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .breadcrumb a {
+      color: var(--primary-color);
+    }
+
+    .product-main-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .product-image-container {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .product-image-container img {
+      max-width: 100%;
+      height: auto;
+      max-height: 350px;
+      object-fit: contain;
+    }
+
+    .product-summary h1 {
+      color: var(--primary-color);
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .product-subtitle {
+      font-weight: 600;
+      color: var(--accent-color);
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .product-description {
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    .btn-action {
+      background-color: #25d366;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    /* SECCIÓN TÉCNICA DETALLADA */
+    .technical-section {
+      border-top: 1px solid #e0e0e0;
+      padding-top: 30px;
+      margin-top: 30px;
+    }
+
+    .technical-section h2 {
+      color: var(--primary-color);
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+    }
+
+    .technical-section h3 {
+      color: var(--primary-color);
+      font-size: 1.1rem;
+      margin: 20px 0 10px 0;
+    }
+
+    .technical-section p, .technical-section ul {
+      line-height: 1.6;
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    .technical-section ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #1a1a1a;
+      color: #aaa;
+      padding: 30px 5%;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    .copyright {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR -->
+  <div class="top-bar">
+    Productos 100% Naturales para tu salud | Envíos garantizados
+  </div>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="navbar">
+    <a href="index.html">
+      <img src="pronaper-logo.png" alt="Pronaper Logo" class="logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="nav-icons">
+      <span>🔍</span>
+      <span>👤</span>
+      <span>🛒</span>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO DEL PRODUCTO -->
+  <main class="product-detail-container">
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> / <a href="catalogo.html">Catálogo</a> / Extracto de Cebolla Negra
+    </div>
+
+    <div class="product-main-grid">
+      <div class="product-image-container">
+        <img src="cebolla-negra.png" alt="Extracto de Cebolla Negra">
+      </div>
+      <div class="product-summary">
+        <h1>Extracto de Cebolla Negra</h1>
+        <div class="product-subtitle">Protección Endotelial, Salud Vascular y Potente Acción Antioxidante</div>
+        <p class="product-description">
+          Obtenido tras un controlado proceso de maduración que atenúa los compuestos volátiles picantes e incrementa sensiblemente su concentración fitoquímica. Rico en flavonoides (Quercetina), compuestos organosulfurados como la Isoaliína y aminoácidos esenciales como la L-Arginina.
+        </p>
+        <a href="https://wa.me/584144149073?text=Hola,%20deseo%20más%20información%20sobre%20el%20Extracto%20de%20Cebolla%20Negra" target="_blank" class="btn-action">
+          📲 Consultar / Comprar por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- FICHA TÉCNICA -->
+    <section class="technical-section">
+      <h2>📋 Ficha Técnica y Propiedades</h2>
+      
+      <p>El Extracto de Cebolla Negra Pronaper ofrece una matriz concentrada de biodisponibilidad superior para favorecer la circulación sanguínea, proteger las paredes vasculares y prevenir el estrés oxidativo arterial.</p>
+
+      <h3>Propiedades Fisiológicas y Mecanismos de Acción</h3>
+      <ul>
+        <li><strong>Protección Endotelial y Microcirculación:</strong> La Quercetina estimula la síntesis de óxido nítrico en el endotelio vascular, favoreciendo la vasodilatación y disminuyendo la resistencia vascular periférica.</li>
+        <li><strong>Hemodinámica Sanguínea:</strong> Sus compuestos azufrados modulan la agregación plaquetaria y reducen la viscosidad de la sangre, disminuyendo el riesgo de estasis venosa.</li>
+        <li><strong>Modulación Lipidémica:</strong> Inhibe la oxidación de los lípidos plasmáticos, atenuando la acumulación de colesterol LDL y ayudando a prevenir la formación de placas ateroscleróticas.</li>
+        <li><strong>Citoprotección Antiinflamatoria:</strong> Flavonoides como la Isorhamnetina y el Kaempferol ejercen una potente acción neutralizadora de radicales libres, previniendo microlesiones inflamatorias en las arterias.</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="copyright">
+      © 2026 Pronaper. Todos los derechos reservados.
+    </div>
+  </footer>
+
+</body>
+</html>
